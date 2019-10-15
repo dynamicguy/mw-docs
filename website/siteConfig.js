@@ -11,10 +11,10 @@
 const siteConfig = {
   title: "MajorityWorld Documentation", // Title for your website.
   tagline:
-    "A modular, high performance e-commerce storefront built with Python, GraphQL, Django, and ReactJS.",
+    "MW e-commerce storefront built with Python, GraphQL, Django, and ReactJS.",
   disableTitleTagline: false,
-  url: "https://your-docusaurus-test-site.com", // Your website URL
-  baseUrl: "/", // Base URL for your project */
+  url: "https://dynamicguy.github.io", // Your website URL
+  baseUrl: "/mw-docs/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -53,7 +53,7 @@ const siteConfig = {
       doc: "dashboard/before-you-start",
       label: "MajorityWorld Dashboard Guide"
     },
-    { href: "/docs/next/api/intro", label: "GraphQL API" },
+    { href: "/mw-docs/docs/next/api/intro", label: "GraphQL API" },
     {
       doc: "getting-started/intro",
       label: "Running your MajorityWorld Server"
@@ -82,10 +82,10 @@ const siteConfig = {
     ]
   },
   
-  editUrl: "https://github.com/dynamicguy/majorrityworld-docs/edit/master/docs/",
+  editUrl: "https://github.com/dynamicguy/mw-docs/edit/master/docs/",
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Dynamic Guy`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -106,8 +106,8 @@ const siteConfig = {
   scripts: [
     "https://buttons.github.io/buttons.js",
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
-    "/js/code-block-copy-button.js",
-    "/js/script.js"
+    "/mw-docs/js/code-block-copy-button.js",
+    "/mw-docs/js/script.js"
   ],
   
   // On page navigation for the current documentation page.
