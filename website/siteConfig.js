@@ -20,15 +20,15 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: "saleor-docs",
-  organizationName: "mirumee",
+  projectName: "mw-docs",
+  organizationName: "dynamicguy",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   algolia: {
     apiKey: "33843c1b27663cc760ddc60811ba51d7",
-    indexName: "saleor",
+    indexName: "mw-docs",
     placeholder: "Search MajorityWorld Documentation"
   },
 

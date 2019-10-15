@@ -4,7 +4,7 @@ title: Handling Money Amounts
 original_id: money
 ---
 
-MajorityWorld uses the [Prices](https://github.com/dynamicguy/prices/) and [django-prices](https://github.com/dynamicguy/django-prices/) libraries to store, calculate and display amounts of money, prices and ranges of those and [django-prices-vatlayer](https://github.com/mirumee/django-prices-vatlayer) to handle VAT tax rates in European Union (optionally).
+MajorityWorld uses the [Prices](https://github.com/dynamicguy/prices/) and [django-prices](https://github.com/dynamicguy/django-prices/) libraries to store, calculate and display amounts of money, prices and ranges of those and [django-prices-vatlayer](https://github.com/dynamicguy/django-prices-vatlayer) to handle VAT tax rates in European Union (optionally).
 
 
 ## Default currency
