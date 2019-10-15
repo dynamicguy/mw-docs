@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How to Obtain a Product · MajorityWorld Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How to Obtain a Product · MajorityWorld Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/saleor-icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-copy-button.js"></script><script type="text/javascript" src="/js/script.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/saleor-logo.svg" alt="MajorityWorld Documentation"/></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search MajorityWorld Documentation" title="Search MajorityWorld Documentation"/></li><li class=""><a target="_self"></a></li><li class=""><a href="/docs/next/dashboard/before-you-start" target="_self">MajorityWorld Dashboard Guide</a></li><li class=""><a href="/docs/next/api/intro" target="_self">GraphQL API</a></li><li class=""><a href="/docs/next/getting-started/intro" target="_self">Running your MajorityWorld Server</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">GraphQL API</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/api/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/intro-to-graphql">Introduction to GraphQL API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/endpoint">The GraphQL Endpoint</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/playground">How to Access the Playground</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/authenticate">How to Authenticate with our API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/pagination">Pagination</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/error-handling">Error Handling</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/example-query">Example Query - Making Your First Call</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/metadata">Extending Models Using Metadata</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/api-process/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api-process/check-out">How to Create Checkout</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/api-process/product">How to Obtain a Product</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/next/api-reference">API Reference</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/dynamicguy/majorrityworld-docs/edit/master/docs/api-process/product.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">How to Obtain a Product</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>This guide describes how to obtain products from the MajorityWorld GraphQL API.</p>
+<p>You can either retrieve a single product or a list of products. You may require a list of products in many situations, for example, when you need to simply display the catalog in your storefront, or to provide a third party service with a list of products available in your store.</p>
+<h2><a class="anchor" aria-hidden="true" id="retrieving-a-product-list"></a><a href="#retrieving-a-product-list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieving a product list</h2>
+<p>To fetch a product list, you need to run the <code>products</code> query. This query takes the following input:</p>
+<ul>
+<li><code>first</code> / <code>last</code></li>
+</ul>
+<p>This argument must be coupled with the number of products you want to get. The maximum number of products per request is 100. This input field is required.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p><strong>Pagination</strong></p>
+<p>Pagination is required in most of the queries returning lists of items in the MajorityWorld GraphQL API. This mechanism protects the server from requests returning large datasets as these can slow down your application and make it less efficient. See the <a href="/docs/next/api/pagination">Pagination</a> topic for more about pagination in MajorityWorld.</p>
+</blockquote>
+<p>Let's take a look at an example query to fetch a list of products:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  products<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    edges <span class="token punctuation">{</span>
+      node <span class="token punctuation">{</span>
+        id
+        name
+        pricing <span class="token punctuation">{</span>
+          priceRange <span class="token punctuation">{</span>
+            start <span class="token punctuation">{</span>
+              gross <span class="token punctuation">{</span>
+                amount
+                currency
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+          discount <span class="token punctuation">{</span>
+            gross <span class="token punctuation">{</span>
+              amount
+              currency
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+          priceRangeUndiscounted <span class="token punctuation">{</span>
+            start <span class="token punctuation">{</span>
+              gross <span class="token punctuation">{</span>
+                amount
+                currency
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        thumbnail <span class="token punctuation">{</span>
+          url
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>In this example, for each product, we want to return the following fields:</p>
+<ul>
+<li><p><code>id</code> - Unique product ID. It can be later used to fetch single products</p></li>
+<li><p><code>name</code> - This is the name of the product, regardless of its possible variants</p></li>
+<li><p><code>pricing</code> - A price is an object composed of different fields, including but not limited to:</p>
+<ul>
+<li><p><code>priceRange</code> - This field always returns the current price. If a product is in sale currently or a discount has been applied, this field will display the discounted price.</p></li>
+<li><p><code>discount</code> - Indicates the discount amount</p></li>
+<li><p><code>priceRangeUndiscounted</code> - Indicates the base price before any discounts or sales were applied</p></li>
+</ul></li>
+<li><p><code>thumbnail</code> - The product's thumbnail image. The <code>thumbnail</code> field has the optional <code>size</code> parameter. You can use it to specify the required size of the thumbnails you want when querying products</p></li>
+</ul>
+<p>Here is the response for the above query:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"products"</span>: {
+      <span class="hljs-attr">"edges"</span>: [
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UHJvZHVjdDo3Mg=="</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Apple Juice"</span>,
+            <span class="hljs-attr">"pricing"</span>: {
+              <span class="hljs-attr">"priceRange"</span>: {
+                <span class="hljs-attr">"start"</span>: {
+                  <span class="hljs-attr">"gross"</span>: {
+                    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">2.1</span>,
+                    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+                  }
+                }
+              },
+              <span class="hljs-attr">"discount"</span>: {
+                <span class="hljs-attr">"gross"</span>: {
+                  <span class="hljs-attr">"amount"</span>: <span class="hljs-number">-1.9</span>,
+                  <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+                }
+              },
+              <span class="hljs-attr">"priceRangeUndiscounted"</span>: {
+                <span class="hljs-attr">"start"</span>: {
+                  <span class="hljs-attr">"gross"</span>: {
+                    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">3</span>,
+                    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+                  }
+                }
+              }
+            },
+            <span class="hljs-attr">"thumbnail"</span>: {
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.com/apple-juice.png"</span>
+            }
+          }
+        },
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UHJvZHVjdDo3NA=="</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Banana Juice"</span>,
+            <span class="hljs-attr">"pricing"</span>: {
+              <span class="hljs-attr">"priceRange"</span>: {
+                <span class="hljs-attr">"start"</span>: {
+                  <span class="hljs-attr">"gross"</span>: {
+                    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">3</span>,
+                    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+                  }
+                }
+              },
+              <span class="hljs-attr">"discount"</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">"priceRangeUndiscounted"</span>: {
+                <span class="hljs-attr">"start"</span>: {
+                  <span class="hljs-attr">"gross"</span>: {
+                    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">3</span>,
+                    <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+                  }
+                }
+              }
+            },
+            <span class="hljs-attr">"thumbnail"</span>: {
+              <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.com/banana-juice.png"</span>
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="filtering"></a><a href="#filtering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filtering</h3>
+<p>The <code>products</code> query gives the ability to filter the results. Use the optional <code>filter</code> argument. Some of the filters that are available here are:</p>
+<ul>
+<li><p><code>search</code> - Search for products by name or description</p></li>
+<li><p><code>isPublished</code> - Filter only published or unpublished products. Only staff users with proper permissions can see unpublished products</p></li>
+<li><p><code>price</code> - Filter by product price</p></li>
+</ul>
+<p>Here is an example query that looks for products containing the term &quot;cushion&quot; in the title or description:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  products<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">search</span><span class="token punctuation">:</span> <span class="token string">"cushion"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    edges <span class="token punctuation">{</span>
+      node <span class="token punctuation">{</span>
+        name
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The response could be:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"products"</span>: {
+      <span class="hljs-attr">"edges"</span>: [
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Colored Parrot Cushion"</span>
+          }
+        },
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"White Parrot Cushion"</span>
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sorting"></a><a href="#sorting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorting</h3>
+<p>In <code>products</code> you can also sort the results using two <code>sortBy</code> arguments:</p>
+<ul>
+<li><p><code>field</code> - Allows selection of a field to sort the results from several predefined choices, such as <code>PRICE</code> or <code>NAME</code></p></li>
+<li><p><code>direction</code> - The direction for sorting items: <code>ASC</code> (ascending) or <code>DESC</code> (descending)</p></li>
+</ul>
+<p>This example shows how to sort the products list by the minimal variant price, lowest to highest:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  products<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token attr-name">sortBy</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">field</span><span class="token punctuation">:</span> <span class="token constant">MINIMAL_PRICE</span><span class="token punctuation">,</span> <span class="token attr-name">direction</span><span class="token punctuation">:</span> <span class="token constant">ASC</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    edges <span class="token punctuation">{</span>
+      node <span class="token punctuation">{</span>
+        name
+        minimalVariantPrice <span class="token punctuation">{</span>
+          amount
+          currency
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As a result, we get the sorted list:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"products"</span>: {
+      <span class="hljs-attr">"edges"</span>: [
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Sea Monster Lager"</span>,
+            <span class="hljs-attr">"minimalVariantPrice"</span>: {
+              <span class="hljs-attr">"amount"</span>: <span class="hljs-number">3</span>,
+              <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+            }
+          }
+        },
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Banana Juice"</span>,
+            <span class="hljs-attr">"minimalVariantPrice"</span>: {
+              <span class="hljs-attr">"amount"</span>: <span class="hljs-number">5</span>,
+              <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="obtaining-a-single-product"></a><a href="#obtaining-a-single-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Obtaining a single product</h2>
+<p>To get a single product, use the <code>product</code> query, which requires only one input field:</p>
+<ul>
+<li><code>id</code> - Unique product ID</li>
+</ul>
+<p>Imagine that you want to render a product details page in a storefront. In this case, we would ask for the following fields:</p>
+<ul>
+<li><code>name</code> - The name of the product</li>
+<li><code>description</code> - The description of the product</li>
+<li><code>images</code> - List of product images</li>
+<li><code>variants</code> - List of product variants</li>
+</ul>
+<p>For each variant we also ask for:</p>
+<ul>
+<li><code>id</code> - Unique variant ID. This ID is used to add items to checkout (see the <a href="api-process/check-out">How to create checkout</a> guide for more details)</li>
+<li><code>sku</code> - Stock keeping unit - usually used by your staff to identify products in your inventory</li>
+<li><code>name</code> - Name of the variant constructed of its attributes</li>
+<li><code>quantity</code> - Current stock quantity of the variant in your inventory</li>
+<li><code>pricing</code> - Information about the current price of the particular variant. Use this field to display the price to your customers</li>
+</ul>
+<p>Here is the example query that fetches a single product:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  product<span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdDoxMTU="</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    name
+    description
+    images <span class="token punctuation">{</span>
+      url
+    <span class="token punctuation">}</span>
+    variants <span class="token punctuation">{</span>
+      id
+      sku
+      name
+      quantity
+      pricing <span class="token punctuation">{</span>
+        price <span class="token punctuation">{</span>
+          gross <span class="token punctuation">{</span>
+            amount
+            currency
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Response:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"product"</span>: {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Black Hoodie"</span>,
+      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Special offer. Buy a hood and get a free jet black sweater attached. Perfect for when you are up to no good."</span>,
+      <span class="hljs-attr">"images"</span>: [
+        {
+          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://example.com/black-hoodie.png"</span>
+        }
+      ],
+      <span class="hljs-attr">"variants"</span>: [
+        {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UHJvZHVjdFZhcmlhbnQ6Mjk2"</span>,
+          <span class="hljs-attr">"sku"</span>: <span class="hljs-string">"black-hoodie-s"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"S"</span>,
+          <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">20</span>,
+          <span class="hljs-attr">"pricing"</span>: {
+            <span class="hljs-attr">"price"</span>: {
+              <span class="hljs-attr">"gross"</span>: {
+                <span class="hljs-attr">"amount"</span>: <span class="hljs-number">30</span>,
+                <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+              }
+            }
+          }
+        },
+        {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UHJvZHVjdFZhcmlhbnQ6Mjk3"</span>,
+          <span class="hljs-attr">"sku"</span>: <span class="hljs-string">"black-hoodie-m"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"M"</span>,
+          <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">15</span>,
+          <span class="hljs-attr">"pricing"</span>: {
+            <span class="hljs-attr">"price"</span>: {
+              <span class="hljs-attr">"gross"</span>: {
+                <span class="hljs-attr">"amount"</span>: <span class="hljs-number">30</span>,
+                <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/api-process/check-out"><span class="arrow-prev">← </span><span>How to Create Checkout</span></a><a class="docs-next button" href="/docs/next/api-reference"><span>API Reference</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#retrieving-a-product-list">Retrieving a product list</a><ul class="toc-headings"><li><a href="#filtering">Filtering</a></li><li><a href="#sorting">Sorting</a></li></ul></li><li><a href="#obtaining-a-single-product">Obtaining a single product</a></li></ul></nav></div><footer class="docs-footer"><div class="wrapper"><div class="docs-footer-top"><div class="newsletter"><span>Get updates from MajorityWorld:</span><div id="mc_embed_signup"><form action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group newsletter-input-wrapper"><input type="email" value="" name="EMAIL" class="required email newsletter-input" id="mce-EMAIL" placeholder="Email address"/><small></small><div class="clear"><input type="submit" value="Sign up" name="Sign up" id="mc-embedded-subscribe" class="newsletter-submit-button"/></div></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_8bd6297e7e63c06d9c242a92d_f8dadd63b8" tabindex="-1" value=""/></div></div></form></div><script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script></div><div class="social-icons"><span>Contact us:</span><a class="twitter-icon" href="https://twitter.com/MajorityWorld" target="_blank"><img src="/img/twitter-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="fb-icon" href="https://www.facebook.com/MajorityWorld/" target="_blank"><img src="/img/facebook-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="so-icon" href="https://spectrum.chat/MajorityWorld" target="_blank"><img src="/img/stackoverflow-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="github-icon" href="https://github.com/dynamicguy/MajorityWorld" target="_blank"><img src="/img/github-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a></div></div><div class="dosc-footer-copyrights"><div class="copyrights"><span>Copyright © 2019</span><span><a href="https://dynamicguy.com" target="_blank">Dynamic Guy</a></span></div><div class="dosc-footer-links"><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions" target="_blank">Terms of use</a><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/" target="_blank">Privacy policy</a></div></div><link rel="stylesheet" href="https://use.typekit.net/itf4hxr.css"/></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '33843c1b27663cc760ddc60811ba51d7',
+                indexName: 'mw-docs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

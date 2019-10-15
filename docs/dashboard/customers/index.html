@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Customers · MajorityWorld Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="View the details of all users who have provided you with their information when setting up an account or placing an order."/><meta name="docsearch:version" content="0.0.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Customers · MajorityWorld Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="View the details of all users who have provided you with their information when setting up an account or placing an order."/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/saleor-icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-copy-button.js"></script><script type="text/javascript" src="/js/script.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/saleor-logo.svg" alt="MajorityWorld Documentation"/></a><a href="/versions"><h3>0.0.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search MajorityWorld Documentation" title="Search MajorityWorld Documentation"/></li><li class=""><a target="_self"></a></li><li class="siteNavGroupActive"><a href="/docs/dashboard/before-you-start" target="_self">MajorityWorld Dashboard Guide</a></li><li class=""><a href="/docs/next/api/intro" target="_self">GraphQL API</a></li><li class=""><a href="/docs/getting-started/intro" target="_self">Running your MajorityWorld Server</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Saleor Dashboard Guide</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Saleor Dashboard Guide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/dashboard/before-you-start">Before you start</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/using-saleor">Using MajorityWorld</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/home">Home</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Catalog</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dashboard/catalog/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/catalog/products">Products</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/catalog/categories">Categories</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/catalog/collections">Collections</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/dashboard/orders">Orders</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/dashboard/customers">Customers</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Discounts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dashboard/discounts/sales">Sales</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/discounts/vouchers">Vouchers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/dashboard/translations">Translations</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Configuration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/products">Product Types and Attributes</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/shipping">Shipping Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/taxes">Taxes</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/staff">Staff Members</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/site">Site Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/pages">Pages</a></li><li class="navListItem"><a class="navItem" href="/docs/dashboard/configuration/navigation">Navigation</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/dynamicguy/majorrityworld-docs/edit/master/docs/dashboard/customers.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Customers</h1></header><article><div><span><p>View the details of all users who have provided you with their information when setting up an account or placing an order.</p>
+<p><img src="/docs/assets/dashboard-customers/1.png" alt="Customers list"></p>
+<p>Click on an individual customer to get an overview of the general information, address, customer activity, and recent orders.</p>
+<p><img src="/docs/assets/dashboard-customers/2.jpg" alt="Customer details"></p>
+<h2><a class="anchor" aria-hidden="true" id="customer-orders-and-history"></a><a href="#customer-orders-and-history" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customer Orders and History</h2>
+<p>The Customer History card gives a brief overview of customer activity. You can view a single order or all orders of a specific customer by clicking in the Recent Orders card. From there you can amend and take actions as described in the Orders section of these documents.</p>
+<h2><a class="anchor" aria-hidden="true" id="managing-customer-addresses"></a><a href="#managing-customer-addresses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing Customer Addresses</h2>
+<p>Click <span class="pillbutton">Manage</span> in the Address Information card to edit or delete a customer address. You can set an address as the default shipping or billing address by clicking on the three dots in the top right corner of a specific address.</p>
+<p>Use the <span class="pillbutton">Add Address</span> button in the top right corner of the Address Book page if a customer asks the administrator to manually add an address. When a customer has more than one address listed, it is important to assign the correct billing and shipping addresses, as described above.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><strong>Localized addresses</strong></p>
+<p>When creating addresses in different countries, MajorityWorld uses Google’s address internationalization database to automatically validate addresses (in both local language/alphabet and their Latinized version: “北京” vs. “Beijing”).</p>
+<p>MajorityWorld can also provide front-end code with information on:</p>
+<ul>
+<li>Which fields should be visible</li>
+<li>How the fields should be arranged</li>
+<li>What field labels to use (“zip code” vs. “postal code”, “state” vs. “district”, etc.)</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="adding-a-customer"></a><a href="#adding-a-customer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a Customer</h2>
+<p>Click <span class="pillbutton">Add Customer</span> to open a new Add Customer page. Enter the customer’s main details in the Customer Overview card. Use the Primary Address card to supply more contact details (company name, shipping address, and phone number). There is also a Note card if you need to enter additional customer information.</p>
+<p>Click <span class="pillbutton">Save</span> to proceed. Your new customer is now set up in the system and you are redirected to this customer’s overview page.</p>
+<h2><a class="anchor" aria-hidden="true" id="editing-general-information"></a><a href="#editing-general-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editing General Information</h2>
+<p>Make changes to the customer name and e-mail by simply typing into the relevant field in the General Information card. The <span class="pillbutton">Save</span> button in the footer will change color once changes have been made that need to be confirmed.</p>
+<p>In the General Information, there is a checkbox next to the text <span class="pillbutton">User account active</span>. Accounts will be active as soon as they are created but you can check the box to suspend a customer account, for example, if you suspect malicious activity. If you have implemented a backend protocol that requires users to confirm account activation from an e-mail, which is not a default feature, this may also be useful if a user has issues with replying to the e-mail and asks for a manual activation.</p>
+<h2><a class="anchor" aria-hidden="true" id="removing-a-customer"></a><a href="#removing-a-customer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Removing a Customer</h2>
+<ul>
+<li>Select the individual customer overview from the main list</li>
+<li>Click <span class="pillbutton">Remove</span> in the footer then confirm deletion</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><strong>GDPR Compliance</strong></p>
+<p>In compliance with GDPR laws in Europe, clicking <span class="pillbutton">Remove</span> will delete the customer profile but information will be retained in active and prior orders for fulfillment purposes. However, MajorityWorld and its creators do not bear responsibility for your compliance with legal protocols, so check the law in your local area and make sure that you comply with all data processing legislation.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/dashboard/orders"><span class="arrow-prev">← </span><span>Orders</span></a><a class="docs-next button" href="/docs/dashboard/discounts/sales"><span>Sales</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#customer-orders-and-history">Customer Orders and History</a></li><li><a href="#managing-customer-addresses">Managing Customer Addresses</a></li><li><a href="#adding-a-customer">Adding a Customer</a></li><li><a href="#editing-general-information">Editing General Information</a></li><li><a href="#removing-a-customer">Removing a Customer</a></li></ul></nav></div><footer class="docs-footer"><div class="wrapper"><div class="docs-footer-top"><div class="newsletter"><span>Get updates from MajorityWorld:</span><div id="mc_embed_signup"><form action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group newsletter-input-wrapper"><input type="email" value="" name="EMAIL" class="required email newsletter-input" id="mce-EMAIL" placeholder="Email address"/><small></small><div class="clear"><input type="submit" value="Sign up" name="Sign up" id="mc-embedded-subscribe" class="newsletter-submit-button"/></div></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_8bd6297e7e63c06d9c242a92d_f8dadd63b8" tabindex="-1" value=""/></div></div></form></div><script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script></div><div class="social-icons"><span>Contact us:</span><a class="twitter-icon" href="https://twitter.com/MajorityWorld" target="_blank"><img src="/img/twitter-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="fb-icon" href="https://www.facebook.com/MajorityWorld/" target="_blank"><img src="/img/facebook-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="so-icon" href="https://spectrum.chat/MajorityWorld" target="_blank"><img src="/img/stackoverflow-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="github-icon" href="https://github.com/dynamicguy/MajorityWorld" target="_blank"><img src="/img/github-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a></div></div><div class="dosc-footer-copyrights"><div class="copyrights"><span>Copyright © 2019</span><span><a href="https://dynamicguy.com" target="_blank">Dynamic Guy</a></span></div><div class="dosc-footer-links"><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions" target="_blank">Terms of use</a><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/" target="_blank">Privacy policy</a></div></div><link rel="stylesheet" href="https://use.typekit.net/itf4hxr.css"/></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '33843c1b27663cc760ddc60811ba51d7',
+                indexName: 'mw-docs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

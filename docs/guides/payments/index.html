@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Payments · MajorityWorld Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Integrating a new Payment Gateway into MajorityWorld"/><meta name="docsearch:version" content="0.0.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Payments · MajorityWorld Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="## Integrating a new Payment Gateway into MajorityWorld"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/saleor-icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-copy-button.js"></script><script type="text/javascript" src="/js/script.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/saleor-logo.svg" alt="MajorityWorld Documentation"/></a><a href="/versions"><h3>0.0.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search MajorityWorld Documentation" title="Search MajorityWorld Documentation"/></li><li class=""><a target="_self"></a></li><li class=""><a href="/docs/dashboard/before-you-start" target="_self">MajorityWorld Dashboard Guide</a></li><li class=""><a href="/docs/next/api/intro" target="_self">GraphQL API</a></li><li class="siteNavGroupActive"><a href="/docs/getting-started/intro" target="_self">Running your MajorityWorld Server</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Developer&#x27;s Guide</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/getting-started/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/installation-macos">Installation for macOS</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/installation-windows">Installation for Windows</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/installation-linux">Installation for Linux</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/creating-superuser">Creating an Administrator Account</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/debug-tools">Debug tools</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started/example-data">Example Data</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customizing MajorityWorld</h4><ul><li class="navListItem"><a class="navItem" href="/docs/customization/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/docker">Using Docker for Development</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/templates">Customizing Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/emails">Customizing Emails</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/frontend">Customizing CSS and JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/backend">Working with Python Code</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/extensions">Extensions</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/i18n">Internationalization</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/running-tests">Running Tests</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/continuous-integration">Continuous Integration</a></li><li class="navListItem"><a class="navItem" href="/docs/customization/pypy">Running with PyPy 3.5</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Supported Payment Gateways</h4><ul><li class="navListItem"><a class="navItem" href="/docs/payment-gateways/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/payment-gateways/braintree">Braintree</a></li><li class="navListItem"><a class="navItem" href="/docs/payment-gateways/razorpay">Razorpay</a></li><li class="navListItem"><a class="navItem" href="/docs/payment-gateways/stripe">Stripe</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Contributing Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/contributing/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing/editorconfig">EditorConfig</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing/coding-style">Coding Style</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing/naming">Naming Conventions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Architecture</h4><ul><li class="navListItem"><a class="navItem" href="/docs/architecture/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/money">Handling Money Amounts</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/products">Product Structure</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/thumbnails">Thumbnails</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/stock">Stock Management</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/orders">Order Management</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/events">Events</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/i18n">Internationalization</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/translations">Model Translations</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/search">Search</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/payments">Payments Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/shippings">Shippings</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/settings">Site Settings</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/page">Pages</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/gdpr">GDPR Compliance</a></li><li class="navListItem"><a class="navItem" href="/docs/architecture/graphql">GraphQL API (Beta)</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrations</h4><ul><li class="navListItem"><a class="navItem" href="/docs/integrations/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/seo">Search Engine Optimization (SEO)</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/smo">Social Media Optimization (SMO)</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/email-markup">Email Markup</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/elasticsearch">Elasticsearch</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/googleanalytics">Google Analytics</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/googleforretail">Google for Retail</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/openexchangerates">Open Exchange Rates</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations/sentry">Error tracking with Sentry</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Deployment</h4><ul><li class="navListItem"><a class="navItem" href="/docs/deployment/docker">Docker</a></li><li class="navListItem"><a class="navItem" href="/docs/deployment/heroku">Heroku</a></li><li class="navListItem"><a class="navItem" href="/docs/deployment/s3">Storing Files on Amazon S3</a></li><li class="navListItem"><a class="navItem" href="/docs/deployment/gcs">Storing Files on Google Cloud Storage (GCS)</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/guides/payments">Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/taxes">Taxes</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/recaptcha">reCAPTCHA</a></li><li class="navListItem"><a class="navItem" href="/docs/guides/email-integration">Email Configuration and Integration</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/dynamicguy/majorrityworld-docs/edit/master/docs/guides/payments.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Payments</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="integrating-a-new-payment-gateway-into-majorityworld"></a><a href="#integrating-a-new-payment-gateway-into-majorityworld" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating a new Payment Gateway into MajorityWorld</h2>
+<p>We are using a universal flow, that each gateway should fulfill, there are several methods that should be implemented.</p>
+<p>Your changes should live under the <code>saleor.payment.gateways.&lt;gateway name&gt;</code> module.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>After completing those steps you will also need to integrate your payment gateway into your SPA Storefront’s workflow.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="get_client_tokenconfig"></a><a href="#get_client_tokenconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>get_client_token(config)</code></h3>
+<p>A client token is a signed data blob that includes configuration and authorization information required by the payment gateway.</p>
+<p>These should not be reused; a new client token should be generated for each payment request.</p>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_client_token</span><span class="hljs-params">(config: GatewayConfig)</span> -&gt; str:</span>
+    gateway = get_payment_gateway(**config.connection_params)
+    client_token = gateway.client_token.generate()
+    <span class="hljs-keyword">return</span> client_token
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>All the below functions receive <code>payment_information</code> as a dataclass: <code>PaymentData</code> and <code>config</code> as a dataclass: <code>GatewayConfig</code>. Those functions should return a response as a dataclass: <code>GatewayResponse</code>. The description of the given structures can be found below.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="authorizepayment_information-config"></a><a href="#authorizepayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>authorize(payment_information, config)</code></h3>
+<p>A process of reserving the amount of money against the customer’s funding source. Money does not change hands until the authorization is captured.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">authorize</span><span class="hljs-params">(
+        payment_information: PaymentData,
+        config: GatewayConfig,
+    )</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Handle connecting to the gateway and sending the auth request here</span>
+    response = gateway.authorize(token=payment_information.token)
+
+    <span class="hljs-comment"># Return a correct response format so MajorityWorld can process it,</span>
+    <span class="hljs-comment"># the response must be json serializable</span>
+    <span class="hljs-keyword">return</span> GatewayResponse(
+        is_success=response.is_success,
+        transaction_id=response.transaction.id,
+        kind=TransactionKind.AUTH,
+        amount=response.amount,
+        currency=response.currency,
+        error=get_error(response),
+        raw_response=get_payment_gateway_response(response),
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="refundpayment_information-config"></a><a href="#refundpayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>refund(payment_information, config)</code></h3>
+<p>Full or partial return of captured funds to the customer.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">refund</span><span class="hljs-params">(
+    payment_information: PaymentData,
+    config: GatewayConfig,
+)</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Handle connecting to the gateway and sending the refund request here</span>
+    response = gateway.refund(token=payment_information.token)
+
+    <span class="hljs-comment"># Return a correct response format so MajorityWorld can process it,</span>
+    <span class="hljs-comment"># the response must be json serializable</span>
+    <span class="hljs-keyword">return</span> GatewayResponse(
+        is_success=response.is_success,
+        transaction_id=response.transaction.id,
+        kind=TransactionKind.REFUND,
+        amount=response.amount,
+        currency=response.currency,
+        error=get_error(response),
+        raw_response=get_payment_gateway_response(response),
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="capturepayment_information-config"></a><a href="#capturepayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>capture(payment_information, config)</code></h3>
+<p>A transfer of the money that was reserved during the authorization stage.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">capture</span><span class="hljs-params">(
+    payment_information: PaymentData,
+    config: GatewayConfig,
+)</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Handle connecting to the gateway and sending the capture request here</span>
+    response = gateway.capture(token=payment_information.token)
+
+    <span class="hljs-comment"># Return a correct response format so MajorityWorld can process it,</span>
+    <span class="hljs-comment"># the response must be json serializable</span>
+    <span class="hljs-keyword">return</span> GatewayResponse(
+        is_success=response.is_success,
+        transaction_id=response.transaction.id,
+        kind=TransactionKind.CAPTURE,
+        amount=response.amount,
+        currency=response.currency,
+        error=get_error(response),
+        raw_response=get_payment_gateway_response(response),
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="voidpayment_information-config"></a><a href="#voidpayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>void(payment_information, config)</code></h3>
+<p>A cancellation of a pending authorization or capture.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">void</span><span class="hljs-params">(
+    payment_information: PaymentData,
+    config: GatewayConfig,
+)</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Handle connecting to the gateway and sending the void request here</span>
+    response = gateway.void(token=payment_information.token)
+
+    <span class="hljs-comment"># Return a correct response format so MajorityWorld can process it,</span>
+    <span class="hljs-comment"># the response must be json serializable</span>
+    <span class="hljs-keyword">return</span> GatewayResponse(
+        is_success=response.is_success,
+        transaction_id=response.transaction.id,
+        kind=TransactionKind.VOID,
+        amount=response.amount,
+        currency=response.currency,
+        error=get_error(response),
+        raw_response=get_payment_gateway_response(response),
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="chargepayment_information-config"></a><a href="#chargepayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>charge(payment_information, config)</code></h3>
+<p>Authorization and capture in a single step.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">charge</span><span class="hljs-params">(
+    payment_information: PaymentData,
+    config: GatewayConfig,
+)</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Handle connecting to the gateway and sending the charge request here</span>
+    response = gateway.charge(
+        token=payment_information.token,
+        amount=payment_information.amount,
+    )
+
+    <span class="hljs-comment"># Return a correct response format so MajorityWorld can process it,</span>
+    <span class="hljs-comment"># the response must be json serializable</span>
+    <span class="hljs-keyword">return</span> GatewayResponse(
+        is_success=response.is_success,
+        transaction_id=response.transaction.id,
+        kind=TransactionKind.CHARGE,
+        amount=response.amount,
+        currency=response.currency,
+        error=get_error(response),
+        raw_response=get_payment_gateway_response(response),
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="process_paymentpayment_information-config"></a><a href="#process_paymentpayment_information-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>process_payment(payment_information, config)</code></h3>
+<p>Used for the checkout process, it should perform all the necessary steps to process a payment. It should use already defined functions, like authorize and capture.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-6"></a><a href="#example-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process_payment</span><span class="hljs-params">(
+    payment_information: PaymentData,
+    config: GatewayConfig,
+)</span> -&gt; GatewayResponse:</span>
+
+    <span class="hljs-comment"># Authorize, update the token, then capture</span>
+    authorize_response = authorize(payment_information, config)
+    payment_information.token = authorize_response.transaction_id
+
+    capture_response = capture(payment_information, config)
+
+    <span class="hljs-keyword">return</span> capture_response
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>payment_information</code></td><td><code>PaymentData</code></td><td>Payment information, containing the token, amount, currency and billing.</td></tr>
+<tr><td><code>config</code></td><td><code>GatewayConfig</code></td><td>Configuration of the payment gateway.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="paymentdata"></a><a href="#paymentdata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>PaymentData</code></h4>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>token</code></td><td><code>str</code></td><td>Token used for transaction, provided by the gateway.</td></tr>
+<tr><td><code>amount</code></td><td><code>Decimal</code></td><td>Amount to be authorized/captured/charged/refunded.</td></tr>
+<tr><td><code>billing</code></td><td><code>AddressData</code></td><td>Billing information.</td></tr>
+<tr><td><code>shipping</code></td><td><code>AddressData</code></td><td>Shipping information.</td></tr>
+<tr><td><code>order_id</code></td><td><code>int</code></td><td>Order id.</td></tr>
+<tr><td><code>customer_ip_address</code></td><td><code>str</code></td><td>IP address of the customer</td></tr>
+<tr><td><code>customer_email</code></td><td><code>str</code></td><td>Email address of the customer.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="addressdata"></a><a href="#addressdata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>AddressData</code></h4>
+<table>
+<thead>
+<tr><th>name</th><th>type</th></tr>
+</thead>
+<tbody>
+<tr><td><code>first_name</code></td><td><code>str</code></td></tr>
+<tr><td><code>last_name</code></td><td><code>str</code></td></tr>
+<tr><td><code>company_name</code></td><td><code>str</code></td></tr>
+<tr><td><code>street_address_1</code></td><td><code>str</code></td></tr>
+<tr><td><code>street_address_2</code></td><td><code>str</code></td></tr>
+<tr><td><code>city</code></td><td><code>str</code></td></tr>
+<tr><td><code>city_area</code></td><td><code>str</code></td></tr>
+<tr><td><code>postal_code</code></td><td><code>str</code></td></tr>
+<tr><td><code>country</code></td><td><code>str</code></td></tr>
+<tr><td><code>country_area</code></td><td><code>str</code></td></tr>
+<tr><td><code>phone</code></td><td><code>str</code></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="gatewayconfig"></a><a href="#gatewayconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GatewayConfig</code></h4>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>auto_capture</code></td><td><code>bool</code></td><td>Define if gateway should also capture funds from the card. If false, payment should be only authorized</td></tr>
+<tr><td><code>template_path</code></td><td><code>str</code></td><td>Path to a template that will be rendered for the checkout.</td></tr>
+<tr><td><code>connection_params</code></td><td><code>dict</code></td><td>List of parameters used for connecting to the payment’s gateway.</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="returns"></a><a href="#returns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returns</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>gateway_response</code></td><td><code>GatewayResponse</code></td><td>GatewayResponse containing details about every transaction, with <code>is_success</code> set to <code>True</code> if no error occurred.</td></tr>
+<tr><td><code>client_token</code></td><td><code>str</code></td><td>Unique client’s token that will be used as his indentifier in the payment process.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="gatewayresponse"></a><a href="#gatewayresponse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GatewayResponse</code></h4>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>transaction_id</code></td><td><code>str</code></td><td>Transaction ID as returned by the gateway.</td></tr>
+<tr><td><code>kind</code></td><td><code>str</code></td><td>Transaction kind, one of: auth, capture, charge, refund, void.</td></tr>
+<tr><td><code>is_success</code></td><td><code>bool</code></td><td>Status whether the transaction was successful or not.</td></tr>
+<tr><td><code>amount</code></td><td><code>Decimal</code></td><td>Amount that the gateway actually charged or authorized.</td></tr>
+<tr><td><code>currency</code></td><td><code>str</code></td><td>Currency in which the gateway charged, needs to be an ISO 4217 code.</td></tr>
+<tr><td><code>error</code></td><td><code>str</code></td><td>An error message if one occured. Should be <code>None</code> if no error occured.</td></tr>
+<tr><td><code>raw_response</code></td><td><code>dict</code></td><td>Raw gateway response as a dict object. By default it is <code>None</code></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="handling-errors"></a><a href="#handling-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling errors</h2>
+<p>Gateway-specific errors should be parsed to MajorityWorld’s universal format. More on this can be found in <a href="/docs/architecture/payments">Payments Architecture</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-payment-method-to-the-old-checkout-optional"></a><a href="#adding-payment-method-to-the-old-checkout-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding payment method to the old checkout (optional)</h2>
+<p>If you are not using SPA Storefront, there are some additional steps you need to perform in order to enable the payment method in your checkout flow.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-a-form"></a><a href="#add-a-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Form</h3>
+<p>Payment on the storefront will be handled via payment form, it should implement all the steps necessary for the payment to succeed. The form must implement <code>get_payment_token</code> that returns a token required to process payments. All payment forms should inherit from <code>django.forms.Form</code>.</p>
+<p>Your changes should live under <code>saleor.payment.gateways.&lt;gateway name&gt;.forms.py</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BraintreePaymentForm</span><span class="hljs-params">(forms.Form)</span>:</span>
+    amount = forms.DecimalField()
+    payment_method_nonce = forms.CharField()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_payment_token</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.cleaned_data[<span class="hljs-string">"payment_method_nonce"</span>]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-create_formdata-payment_information-connection_params"></a><a href="#implement-create_formdata-payment_information-connection_params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement <code>create_form(data, payment_information, connection_params)</code></h3>
+<p>Should return the form that will be used for the checkout process.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Should be added as a part of the provider’s methods.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="example-8"></a><a href="#example-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_form</span><span class="hljs-params">(data, payment_information, connection_params)</span>:</span>
+    <span class="hljs-keyword">return</span> BraintreePaymentForm(
+        data,
+        payment_information,
+        connection_params,
+    )
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="implement-template_path"></a><a href="#implement-template_path" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement <code>template_path</code></h3>
+<p>Should specify a path to a template that will be rendered for the checkout.</p>
+<pre><code class="hljs css language-python">PAYMENT_GATEWAYS = {
+    DUMMY: {
+        <span class="hljs-string">"module"</span>: <span class="hljs-string">"saleor.payment.gateways.dummy"</span>,
+        <span class="hljs-string">"config"</span>: {
+            <span class="hljs-string">"auto_capture"</span>: <span class="hljs-literal">True</span>,
+            <span class="hljs-string">"connection_params"</span>: {},
+            <span class="hljs-string">"template_path"</span>: <span class="hljs-string">"order/payment/dummy.html"</span>,
+        },
+    },
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-template"></a><a href="#add-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add template</h3>
+<p>Add a new template to handle the payment process with your payment form. Your changes should live under <code>saleor.templates.order.payment.&lt;gateway name&gt;.html</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-new-payment-gateway-to-the-settings"></a><a href="#adding-new-payment-gateway-to-the-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding new payment gateway to the settings</h2>
+<pre><code class="hljs css language-python">PAYMENT_GATEWAYS = {
+    <span class="hljs-string">"braintree"</span>: {
+        <span class="hljs-string">"module"</span>: <span class="hljs-string">"saleor.payment.gateways.braintree"</span>,
+        <span class="hljs-string">"config"</span>: {
+            <span class="hljs-string">"auto_capture"</span>: get_bool_from_env(<span class="hljs-string">"BRAINTREE_AUTO_CAPTURE"</span>, <span class="hljs-literal">True</span>),
+            <span class="hljs-string">"store_card"</span>: get_bool_from_env(<span class="hljs-string">"BRAINTREE_STORE_CARD"</span>, <span class="hljs-literal">False</span>),
+            <span class="hljs-string">"template_path"</span>: <span class="hljs-string">"order/payment/braintree.html"</span>,
+            <span class="hljs-string">"connection_params"</span>: {
+                <span class="hljs-string">"sandbox_mode"</span>: get_bool_from_env(<span class="hljs-string">"BRAINTREE_SANDBOX_MODE"</span>, <span class="hljs-literal">True</span>),
+                <span class="hljs-string">"merchant_id"</span>: os.environ.get(<span class="hljs-string">"BRAINTREE_MERCHANT_ID"</span>),
+                <span class="hljs-string">"public_key"</span>: os.environ.get(<span class="hljs-string">"BRAINTREE_PUBLIC_KEY"</span>),
+                <span class="hljs-string">"private_key"</span>: os.environ.get(<span class="hljs-string">"BRAINTREE_PRIVATE_KEY"</span>),
+            },
+        },
+    },
+}
+</code></pre>
+<p>Please take a moment to consider the example settings above.</p>
+<ul>
+<li><code>braintree</code> - Gateway’s name, which will be used to identify the gateway during the payment process. It’s stored in the Payment model under the gateway value.</li>
+<li><code>module</code> - The path to the integration module (assuming that your changes live within the <code>saleor.payment.gateways.braintree.__init__.py</code> file)</li>
+<li><code>connection_params</code> - List of parameters used for connecting to the payment’s gateway.</li>
+<li><code>auto_capture</code>- Define if the gateway should also capture funds from the card. When <code>auto_capture</code> is set to <code>False</code>, funds will be blocked by the customer’s bank for a 7-days period, a manual capture will be required.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>All payment backends default to using sandbox mode. This is very useful for development but make sure you use production mode when deploying to a production server.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="enabling-new-payment-gateway"></a><a href="#enabling-new-payment-gateway" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enabling new payment gateway</h2>
+<p>Last but not least, if you want to enable your payment gateway in the checkout process, add it’s name to the <code>CHECKOUT_PAYMENT_GATEWAYS</code> setting.</p>
+<h2><a class="anchor" aria-hidden="true" id="tips"></a><a href="#tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tips</h2>
+<p>Whenever possible, use <code>currency</code> and <code>amount</code> as <strong>returned</strong> by the payment gateway, not the one that was sent to it. It might happen, that gateway (eg. Braintree) is set to different currency than your shop is. In such case, you might want to charge the customer 70 dollars, but due to gateway misconfiguration, he will be charged 70 euros. Such a situation should be handled, and adequate error should be thrown.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/deployment/gcs"><span class="arrow-prev">← </span><span>Storing Files on Google Cloud Storage (GCS)</span></a><a class="docs-next button" href="/docs/guides/taxes"><span>How to Configure Taxes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#integrating-a-new-payment-gateway-into-majorityworld">Integrating a new Payment Gateway into MajorityWorld</a><ul class="toc-headings"><li><a href="#get_client_tokenconfig"><code>get_client_token(config)</code></a></li><li><a href="#authorizepayment_information-config"><code>authorize(payment_information, config)</code></a></li><li><a href="#refundpayment_information-config"><code>refund(payment_information, config)</code></a></li><li><a href="#capturepayment_information-config"><code>capture(payment_information, config)</code></a></li><li><a href="#voidpayment_information-config"><code>void(payment_information, config)</code></a></li><li><a href="#chargepayment_information-config"><code>charge(payment_information, config)</code></a></li><li><a href="#process_paymentpayment_information-config"><code>process_payment(payment_information, config)</code></a></li><li><a href="#parameters">Parameters</a></li><li><a href="#returns">Returns</a></li></ul></li><li><a href="#handling-errors">Handling errors</a></li><li><a href="#adding-payment-method-to-the-old-checkout-optional">Adding payment method to the old checkout (optional)</a><ul class="toc-headings"><li><a href="#add-a-form">Add a Form</a></li><li><a href="#implement-create_formdata-payment_information-connection_params">Implement <code>create_form(data, payment_information, connection_params)</code></a></li><li><a href="#implement-template_path">Implement <code>template_path</code></a></li><li><a href="#add-template">Add template</a></li></ul></li><li><a href="#adding-new-payment-gateway-to-the-settings">Adding new payment gateway to the settings</a></li><li><a href="#enabling-new-payment-gateway">Enabling new payment gateway</a></li><li><a href="#tips">Tips</a></li></ul></nav></div><footer class="docs-footer"><div class="wrapper"><div class="docs-footer-top"><div class="newsletter"><span>Get updates from MajorityWorld:</span><div id="mc_embed_signup"><form action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group newsletter-input-wrapper"><input type="email" value="" name="EMAIL" class="required email newsletter-input" id="mce-EMAIL" placeholder="Email address"/><small></small><div class="clear"><input type="submit" value="Sign up" name="Sign up" id="mc-embedded-subscribe" class="newsletter-submit-button"/></div></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_8bd6297e7e63c06d9c242a92d_f8dadd63b8" tabindex="-1" value=""/></div></div></form></div><script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script></div><div class="social-icons"><span>Contact us:</span><a class="twitter-icon" href="https://twitter.com/MajorityWorld" target="_blank"><img src="/img/twitter-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="fb-icon" href="https://www.facebook.com/MajorityWorld/" target="_blank"><img src="/img/facebook-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="so-icon" href="https://spectrum.chat/MajorityWorld" target="_blank"><img src="/img/stackoverflow-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="github-icon" href="https://github.com/dynamicguy/MajorityWorld" target="_blank"><img src="/img/github-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a></div></div><div class="dosc-footer-copyrights"><div class="copyrights"><span>Copyright © 2019</span><span><a href="https://dynamicguy.com" target="_blank">Dynamic Guy</a></span></div><div class="dosc-footer-links"><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions" target="_blank">Terms of use</a><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/" target="_blank">Privacy policy</a></div></div><link rel="stylesheet" href="https://use.typekit.net/itf4hxr.css"/></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '33843c1b27663cc760ddc60811ba51d7',
+                indexName: 'mw-docs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

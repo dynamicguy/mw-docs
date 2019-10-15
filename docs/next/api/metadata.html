@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Extending Models Using Metadata · MajorityWorld Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="MajorityWorld gives you the possibility to customize your shop without changes in the code. Once you get your own MajorityWorld instance, you can extend most of MajorityWorld&#x27;s database models using metadata. "/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Extending Models Using Metadata · MajorityWorld Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/"/><meta property="og:description" content="MajorityWorld gives you the possibility to customize your shop without changes in the code. Once you get your own MajorityWorld instance, you can extend most of MajorityWorld&#x27;s database models using metadata. "/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/saleor-icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-copy-button.js"></script><script type="text/javascript" src="/js/script.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/saleor-logo.svg" alt="MajorityWorld Documentation"/></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a target="_self"></a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search MajorityWorld Documentation" title="Search MajorityWorld Documentation"/></li><li class=""><a target="_self"></a></li><li class=""><a href="/docs/next/dashboard/before-you-start" target="_self">MajorityWorld Dashboard Guide</a></li><li class=""><a href="/docs/next/api/intro" target="_self">GraphQL API</a></li><li class=""><a href="/docs/next/getting-started/intro" target="_self">Running your MajorityWorld Server</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">GraphQL API</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/api/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/intro-to-graphql">Introduction to GraphQL API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/endpoint">The GraphQL Endpoint</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/playground">How to Access the Playground</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/authenticate">How to Authenticate with our API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/pagination">Pagination</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/error-handling">Error Handling</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api/example-query">Example Query - Making Your First Call</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/api/metadata">Extending Models Using Metadata</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/api-process/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api-process/check-out">How to Create Checkout</a></li><li class="navListItem"><a class="navItem" href="/docs/next/api-process/product">How to Obtain a Product</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/next/api-reference">API Reference</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/dynamicguy/majorrityworld-docs/edit/master/docs/api/metadata.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Extending Models Using Metadata</h1></header><article><div><span><p>MajorityWorld gives you the possibility to customize your shop without changes in the code. Once you get your own MajorityWorld instance, you can extend most of MajorityWorld's database models using metadata.</p>
+<p>For example, you can add specific fields to the metadata of objects to store extra information on that object. By using metadata, you can also customize the way your storefront appears to your customers.</p>
+<p>The following models contain metafields which data can be modified:</p>
+<ul>
+<li><p><code>Collection</code></p></li>
+<li><p><code>Category</code></p></li>
+<li><p><code>Product</code></p></li>
+<li><p><code>ProductVariant</code></p></li>
+<li><p><code>ProductType</code></p></li>
+<li><p><code>User</code></p></li>
+<li><p><code>Attribute</code></p></li>
+<li><p><code>ServiceAccount</code></p></li>
+<li><p><code>Checkout</code></p></li>
+</ul>
+<p>Each metafield has four components creating the metadata:</p>
+<ul>
+<li><p><code>namespace</code> - Name to distinguish the metadata contained in this metafield from other metafields.</p></li>
+<li><p><code>clients</code> - It separates the <code>namespace</code> into subsections for specific <code>key</code> and <code>value</code> pairs, as there can be multiple examples of them.</p></li>
+<li><p><code>key</code> - This is the name of your metafield.</p></li>
+<li><p><code>value</code> - This is the metafield's content.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="sample-queries"></a><a href="#sample-queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample queries</h2>
+<p>The below examples show a sample query and response containing metadata:</p>
+<h3><a class="anchor" aria-hidden="true" id="sample-query-with-metadata"></a><a href="#sample-query-with-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample query with metadata</h3>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  products<span class="token punctuation">(</span><span class="token attr-name">first</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    edges <span class="token punctuation">{</span>
+      node <span class="token punctuation">{</span>
+        id
+        name
+        meta <span class="token punctuation">{</span>
+          namespace
+          clients <span class="token punctuation">{</span>
+            name
+            metadata <span class="token punctuation">{</span>
+              key
+              value
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sample-response-from-query-with-metadata"></a><a href="#sample-response-from-query-with-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample response from query with metadata</h3>
+<pre><code class="hljs">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"products"</span>: {
+      <span class="hljs-attr">"edges"</span>: [
+        {
+          <span class="hljs-attr">"node"</span>: {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UHJvZHVjdDo4Nw=="</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Yellow Plimsolls"</span>,
+            <span class="hljs-attr">"meta"</span>: [
+              {
+                <span class="hljs-attr">"namespace"</span>: <span class="hljs-string">"taxes"</span>,
+                <span class="hljs-attr">"clients"</span>: [
+                  {
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"vatlayer"</span>,
+                    <span class="hljs-attr">"metadata"</span>: [
+                      {
+                        <span class="hljs-attr">"key"</span>: <span class="hljs-string">"code"</span>,
+                        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"standard"</span>
+                      },
+                      {
+                        <span class="hljs-attr">"key"</span>: <span class="hljs-string">"description"</span>,
+                        <span class="hljs-attr">"value"</span>: <span class="hljs-string">""</span>
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="making-changes-in-metafields"></a><a href="#making-changes-in-metafields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making changes in metafields</h2>
+<p>You can also add, update or remove metadata.</p>
+<h3><a class="anchor" aria-hidden="true" id="sample-mutation-to-add-or-update-metadata"></a><a href="#sample-mutation-to-add-or-update-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample mutation to add or update metadata</h3>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  productUpdateMetadata<span class="token punctuation">(</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdDo3Mg=="</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">namespace</span><span class="token punctuation">:</span> <span class="token string">"my_namespace1"</span>
+      <span class="token attr-name">clientName</span><span class="token punctuation">:</span> <span class="token string">"custom_name"</span>
+      <span class="token attr-name">key</span><span class="token punctuation">:</span> <span class="token string">"special_product"</span>
+      <span class="token attr-name">value</span><span class="token punctuation">:</span> <span class="token string">"true"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+    product <span class="token punctuation">{</span>
+      meta <span class="token punctuation">{</span>
+        namespace
+        clients <span class="token punctuation">{</span>
+          name
+          metadata <span class="token punctuation">{</span>
+            key
+            value
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sample-mutation-to-remove-a-section-from-metadata"></a><a href="#sample-mutation-to-remove-a-section-from-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample mutation to remove a section from metadata</h3>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  productClearMetadata<span class="token punctuation">(</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdDo3Mg=="</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">namespace</span><span class="token punctuation">:</span> <span class="token string">"my_namespace"</span>
+      <span class="token attr-name">clientName</span><span class="token punctuation">:</span> <span class="token string">"custom_name"</span>
+      <span class="token attr-name">key</span><span class="token punctuation">:</span> <span class="token string">"special_product"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+    product <span class="token punctuation">{</span>
+      id
+      meta <span class="token punctuation">{</span>
+        namespace
+        clients <span class="token punctuation">{</span>
+          name
+          metadata <span class="token punctuation">{</span>
+            key
+            value
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="private-and-public-metafields"></a><a href="#private-and-public-metafields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Private and public metafields</h2>
+<p>Models can have two metafields:</p>
+<ul>
+<li><p><code>meta</code> - This field is public and visible to non-authenticated users</p></li>
+<li><p><code>privateMeta</code> This is protected and visible only to staff users with appropriate permissions</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="sample-mutation-to-add-or-update-a-field-in-private-metadata"></a><a href="#sample-mutation-to-add-or-update-a-field-in-private-metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample mutation to add or update a field in private metadata</h3>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  productUpdatePrivateMetadata<span class="token punctuation">(</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdDo3Mg=="</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">namespace</span><span class="token punctuation">:</span> <span class="token string">"my_private_section"</span>
+      <span class="token attr-name">clientName</span><span class="token punctuation">:</span> <span class="token string">"private"</span>
+      <span class="token attr-name">key</span><span class="token punctuation">:</span> <span class="token string">"special_product"</span>
+      <span class="token attr-name">value</span><span class="token punctuation">:</span> <span class="token string">"true"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+    product <span class="token punctuation">{</span>
+      privateMeta <span class="token punctuation">{</span>
+        namespace
+        clients <span class="token punctuation">{</span>
+          name
+          metadata <span class="token punctuation">{</span>
+            key
+            value
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sample-mutation-to-remove-a-section-from-private-meta"></a><a href="#sample-mutation-to-remove-a-section-from-private-meta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample mutation to remove a section from private meta</h3>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  productClearPrivateMetadata<span class="token punctuation">(</span>
+    <span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdDo3Mg=="</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">namespace</span><span class="token punctuation">:</span> <span class="token string">"my_private_section"</span>
+      <span class="token attr-name">clientName</span><span class="token punctuation">:</span> <span class="token string">"private"</span>
+      <span class="token attr-name">key</span><span class="token punctuation">:</span> <span class="token string">"special_product"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+    product <span class="token punctuation">{</span>
+      id
+      privateMeta <span class="token punctuation">{</span>
+        namespace
+        clients <span class="token punctuation">{</span>
+          name
+          metadata <span class="token punctuation">{</span>
+            key
+            value
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/api/example-query"><span class="arrow-prev">← </span><span>Example Query - Making Your First Call</span></a><a class="docs-next button" href="/docs/next/api-process/intro"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-queries">Sample queries</a><ul class="toc-headings"><li><a href="#sample-query-with-metadata">Sample query with metadata</a></li><li><a href="#sample-response-from-query-with-metadata">Sample response from query with metadata</a></li></ul></li><li><a href="#making-changes-in-metafields">Making changes in metafields</a><ul class="toc-headings"><li><a href="#sample-mutation-to-add-or-update-metadata">Sample mutation to add or update metadata</a></li><li><a href="#sample-mutation-to-remove-a-section-from-metadata">Sample mutation to remove a section from metadata</a></li></ul></li><li><a href="#private-and-public-metafields">Private and public metafields</a><ul class="toc-headings"><li><a href="#sample-mutation-to-add-or-update-a-field-in-private-metadata">Sample mutation to add or update a field in private metadata</a></li><li><a href="#sample-mutation-to-remove-a-section-from-private-meta">Sample mutation to remove a section from private meta</a></li></ul></li></ul></nav></div><footer class="docs-footer"><div class="wrapper"><div class="docs-footer-top"><div class="newsletter"><span>Get updates from MajorityWorld:</span><div id="mc_embed_signup"><form action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group newsletter-input-wrapper"><input type="email" value="" name="EMAIL" class="required email newsletter-input" id="mce-EMAIL" placeholder="Email address"/><small></small><div class="clear"><input type="submit" value="Sign up" name="Sign up" id="mc-embedded-subscribe" class="newsletter-submit-button"/></div></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_8bd6297e7e63c06d9c242a92d_f8dadd63b8" tabindex="-1" value=""/></div></div></form></div><script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script></div><div class="social-icons"><span>Contact us:</span><a class="twitter-icon" href="https://twitter.com/MajorityWorld" target="_blank"><img src="/img/twitter-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="fb-icon" href="https://www.facebook.com/MajorityWorld/" target="_blank"><img src="/img/facebook-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="so-icon" href="https://spectrum.chat/MajorityWorld" target="_blank"><img src="/img/stackoverflow-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="github-icon" href="https://github.com/dynamicguy/MajorityWorld" target="_blank"><img src="/img/github-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a></div></div><div class="dosc-footer-copyrights"><div class="copyrights"><span>Copyright © 2019</span><span><a href="https://dynamicguy.com" target="_blank">Dynamic Guy</a></span></div><div class="dosc-footer-links"><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions" target="_blank">Terms of use</a><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/" target="_blank">Privacy policy</a></div></div><link rel="stylesheet" href="https://use.typekit.net/itf4hxr.css"/></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '33843c1b27663cc760ddc60811ba51d7',
+                indexName: 'mw-docs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
