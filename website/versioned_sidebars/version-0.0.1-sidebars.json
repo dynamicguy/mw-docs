@@ -1,0 +1,156 @@
+{
+  "version-0.0.1-getting-started/intro": {
+    "Developer's Guide": [
+      {
+        "type": "subcategory",
+        "label": "Getting started",
+        "ids": [
+          "version-0.0.1-getting-started/intro",
+          "version-0.0.1-getting-started/installation-macos",
+          "version-0.0.1-getting-started/installation-windows",
+          "version-0.0.1-getting-started/installation-linux",
+          "version-0.0.1-getting-started/configuration",
+          "version-0.0.1-getting-started/creating-superuser",
+          "version-0.0.1-getting-started/debug-tools",
+          "version-0.0.1-getting-started/example-data"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Customizing MajorityWorld",
+        "ids": [
+          "version-0.0.1-customization/intro",
+          "version-0.0.1-customization/docker",
+          "version-0.0.1-customization/templates",
+          "version-0.0.1-customization/emails",
+          "version-0.0.1-customization/frontend",
+          "version-0.0.1-customization/backend",
+          "version-0.0.1-customization/extensions",
+          "version-0.0.1-customization/i18n",
+          "version-0.0.1-customization/running-tests",
+          "version-0.0.1-customization/continuous-integration",
+          "version-0.0.1-customization/pypy"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Supported Payment Gateways",
+        "ids": [
+          "version-0.0.1-payment-gateways/intro",
+          "version-0.0.1-payment-gateways/braintree",
+          "version-0.0.1-payment-gateways/razorpay",
+          "version-0.0.1-payment-gateways/stripe"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Contributing Guides",
+        "ids": [
+          "version-0.0.1-contributing/intro",
+          "version-0.0.1-contributing/editorconfig",
+          "version-0.0.1-contributing/coding-style",
+          "version-0.0.1-contributing/naming"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Architecture",
+        "ids": [
+          "version-0.0.1-architecture/intro",
+          "version-0.0.1-architecture/money",
+          "version-0.0.1-architecture/products",
+          "version-0.0.1-architecture/thumbnails",
+          "version-0.0.1-architecture/stock",
+          "version-0.0.1-architecture/orders",
+          "version-0.0.1-architecture/events",
+          "version-0.0.1-architecture/i18n",
+          "version-0.0.1-architecture/translations",
+          "version-0.0.1-architecture/search",
+          "version-0.0.1-architecture/payments",
+          "version-0.0.1-architecture/shippings",
+          "version-0.0.1-architecture/settings",
+          "version-0.0.1-architecture/page",
+          "version-0.0.1-architecture/gdpr",
+          "version-0.0.1-architecture/graphql"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Integrations",
+        "ids": [
+          "version-0.0.1-integrations/intro",
+          "version-0.0.1-integrations/seo",
+          "version-0.0.1-integrations/smo",
+          "version-0.0.1-integrations/email-markup",
+          "version-0.0.1-integrations/elasticsearch",
+          "version-0.0.1-integrations/googleanalytics",
+          "version-0.0.1-integrations/googleforretail",
+          "version-0.0.1-integrations/openexchangerates",
+          "version-0.0.1-integrations/sentry"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Deployment",
+        "ids": [
+          "version-0.0.1-deployment/docker",
+          "version-0.0.1-deployment/heroku",
+          "version-0.0.1-deployment/s3",
+          "version-0.0.1-deployment/gcs"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Guides",
+        "ids": [
+          "version-0.0.1-guides/payments",
+          "version-0.0.1-guides/taxes",
+          "version-0.0.1-guides/recaptcha",
+          "version-0.0.1-guides/email-integration"
+        ]
+      }
+    ]
+  },
+  "version-0.0.1-dashboard/before-you-start": {
+    "Saleor Dashboard Guide": [
+      "version-0.0.1-dashboard/before-you-start",
+      "version-0.0.1-dashboard/using-saleor",
+      "version-0.0.1-dashboard/home",
+      {
+        "type": "subcategory",
+        "label": "Catalog",
+        "ids": [
+          "version-0.0.1-dashboard/catalog/intro",
+          "version-0.0.1-dashboard/catalog/products",
+          "version-0.0.1-dashboard/catalog/categories",
+          "version-0.0.1-dashboard/catalog/collections"
+        ]
+      },
+      "version-0.0.1-dashboard/orders",
+      "version-0.0.1-dashboard/customers",
+      {
+        "type": "subcategory",
+        "label": "Discounts",
+        "ids": [
+          "version-0.0.1-dashboard/discounts/sales",
+          "version-0.0.1-dashboard/discounts/vouchers"
+        ]
+      },
+      "version-0.0.1-dashboard/translations",
+      {
+        "type": "subcategory",
+        "label": "Configuration",
+        "ids": [
+          "version-0.0.1-dashboard/configuration/intro",
+          "version-0.0.1-dashboard/configuration/products",
+          "version-0.0.1-dashboard/configuration/shipping",
+          "version-0.0.1-dashboard/configuration/taxes",
+          "version-0.0.1-dashboard/configuration/staff",
+          "version-0.0.1-dashboard/configuration/site",
+          "version-0.0.1-dashboard/configuration/pages",
+          "version-0.0.1-dashboard/configuration/navigation"
+        ]
+      }
+    ]
+  }
+}

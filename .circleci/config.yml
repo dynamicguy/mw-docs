@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  deploy-docs:
+    docker:
+      - image: circleci/python:3.7.3-stretch
+    working_directory: /tmp/docs-deployment
+    steps:
+      - checkout
+      - run:
+          name: Build docs page
+          command: |
+            curl -sL https://deb.nodesource.com/setup_11.x | sudo bash -
+            sudo apt-get install -y nodejs
+            cd website
+            npm install
+            npm run build
+      - run:
+          name: Deploy to S3
+          command: |
+            virtualenv ~/sdk
+            source ~/sdk/bin/activate
+            pip install awscli --upgrade
+            rm $WEBSITE_BUILD_DIR/index.html
+            aws s3 sync $WEBSITE_BUILD_DIR $AWS_S3_BUCKET --cache-control "public,max-age=86400,s-maxage=86400"
+            aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION --paths "/*"
+            aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_LEGACY --paths "/*"
+
+workflows:
+  version: 2
+  docs-deployment:
+    jobs:
+      - deploy-docs:
+          filters:
+            branches:
+              only: master
