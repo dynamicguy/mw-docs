@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How to Create Checkout · MajorityWorld Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Introduction"/><meta name="docsearch:version" content="0.0.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How to Create Checkout · MajorityWorld Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://dynamicguy.github.io/mw-docs/"/><meta property="og:description" content="## Introduction"/><meta property="og:image" content="https://dynamicguy.github.io/mw-docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://dynamicguy.github.io/mw-docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/mw-docs/img/saleor-icon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css"/><link rel="alternate" type="application/atom+xml" href="https://dynamicguy.github.io/mw-docs/blog/atom.xml" title="MajorityWorld Documentation Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://dynamicguy.github.io/mw-docs/blog/feed.xml" title="MajorityWorld Documentation Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/mw-docs/js/code-block-copy-button.js"></script><script type="text/javascript" src="/mw-docs/js/script.js"></script><script src="/mw-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/mw-docs/css/prism.css"/><link rel="stylesheet" href="/mw-docs/css/main.css"/><script src="/mw-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/mw-docs/"><img class="logo" src="/mw-docs/img/saleor-logo.svg" alt="MajorityWorld Documentation"/></a><a href="/mw-docs/versions"><h3>0.0.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/mw-docs/docs/dashboard/before-you-start" target="_self">Dashboard</a></li><li class=""><a href="/mw-docs/docs/getting-started/intro" target="_self">Server</a></li><li class=""><a href="/mw-docs/docs/next/api/intro" target="_self">GraphQL API</a></li><li class=""><a href="/mw-docs/help" target="_self">Help</a></li><li class=""><a href="/mw-docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search MW" title="Search MW"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/dynamicguy/mw-docs/edit/master/docs/api-process/check-out.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">How to Create Checkout</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Below is a description of a checkout process. We assume that at this stage you have already completed the steps included in the <a href="/mw-docs/docs/api/intro">Getting Started</a> section of this chapter and that you are familiar with the basic setup of the MajorityWorld GraphQL API.</p>
+<p>The below process describes the key milestones in the checkout process flow in MajorityWorld. There are also additional steps that may occur along the way; however, the purpose of this instruction is to deliver a base reference for the user to work with.</p>
+<p>The code snippets included in this section may be run in <a href="/mw-docs/docs/api/playground">Playground</a> or your preferred HTTP client.</p>
+<h2><a class="anchor" aria-hidden="true" id="creating-the-checkout"></a><a href="#creating-the-checkout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating the Checkout</h2>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>A <code>Checkout</code> object can be created for logged in users and for anonymous (guest) users.</p>
+<ul>
+<li><p>If you use the <code>checkoutCreate</code> mutation including the authentication token, this checkout is assigned to the user who is authenticated by this token. For more information on how to authenticate with our API, see the <a href="/mw-docs/docs/api/authenticate">Authentication</a> topic.</p></li>
+<li><p>If no authentication token is provided, the checkout is created for an anonymous user, and an email address is used to identify such a <code>Checkout</code> object, linking it with the anonymous user. In this case, an email is required to create the checkout.</p></li>
+</ul>
+</blockquote>
+<p>To create a <code>Checkout</code> object, use the <code>checkoutCreate</code> mutation.</p>
+<p>This mutation requires the following input:</p>
+<ul>
+<li><p><code>email</code> - user's email address</p></li>
+<li><p><code>shippingAddress</code> - user's shipping address</p></li>
+<li><p><code>billingAddress</code> - user's billing address</p></li>
+<li><p><code>lines</code> - list of checkout lines. Each checkout line represents a <em>variant id</em> (the specific product) and its quantity</p></li>
+</ul>
+<p>As a result, this mutation returns the following fields:</p>
+<ul>
+<li><p><code>checkout</code> - contains complete checkout information, including the following fields:</p>
+<ul>
+<li><p><code>id</code> - a unique checkout ID which is used as a reference identify for the checkout in other checkout operations</p></li>
+<li><p><code>token</code> - similarly to <code>id</code>, this is a unique identifier, but it is also a public token. It will save the user's checkout session if, for example, they accidentally close the browser</p></li>
+<li><p><code>totalPrice</code> - the total price of the checkout lines and shipping costs</p></li>
+<li><p><code>isShippingRequired</code> - denotes whether shipping is required for this checkout</p></li>
+<li><p><code>availablePaymentGateways</code> - a list of payment gateways which are currently configured on your MajorityWorld server and can be used to pay for the checkout</p></li>
+<li><p><code>availableShippingMethods</code> - a list of available shipping methods for this checkout. If the items in the cart require shipment, setting a shipping method is mandatory</p></li>
+</ul></li>
+<li><p><code>created</code> - a boolean field which tells whether a new checkout object was created, or an existing one was used. For example, if an authenticated user had a unfinished checkout before, it would be reused</p></li>
+<li><p><code>errors</code> - list of errors that could occur during mutation execution</p></li>
+</ul>
+<p>The following example shows how the <code>checkoutCreate</code> mutation creates the <code>Checkout</code> object and returns the checkout information:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  checkoutCreate<span class="token punctuation">(</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">email</span><span class="token punctuation">:</span> <span class="token string">"customer@example.com"</span>
+      <span class="token attr-name">lines</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token attr-name">quantity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token attr-name">variantId</span><span class="token punctuation">:</span> <span class="token string">"UHJvZHVjdFZhcmlhbnQ6Mjk3"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token attr-name">shippingAddress</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token attr-name">firstName</span><span class="token punctuation">:</span> <span class="token string">"John"</span>
+        <span class="token attr-name">lastName</span><span class="token punctuation">:</span> <span class="token string">"Doe"</span>
+        <span class="token attr-name">streetAddress1</span><span class="token punctuation">:</span> <span class="token string">"1470  Pinewood Avenue"</span>
+        <span class="token attr-name">city</span><span class="token punctuation">:</span> <span class="token string">"Michigan"</span>
+        <span class="token attr-name">postalCode</span><span class="token punctuation">:</span> <span class="token string">"49855"</span>
+        <span class="token attr-name">country</span><span class="token punctuation">:</span> <span class="token string">"US"</span>
+        <span class="token attr-name">countryArea</span><span class="token punctuation">:</span> <span class="token string">"MI"</span>
+      <span class="token punctuation">}</span>
+      <span class="token attr-name">billingAddress</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token attr-name">firstName</span><span class="token punctuation">:</span> <span class="token string">"John"</span>
+        <span class="token attr-name">lastName</span><span class="token punctuation">:</span> <span class="token string">"Doe"</span>
+        <span class="token attr-name">streetAddress1</span><span class="token punctuation">:</span> <span class="token string">"1470  Pinewood Avenue"</span>
+        <span class="token attr-name">city</span><span class="token punctuation">:</span> <span class="token string">"Michigan"</span>
+        <span class="token attr-name">postalCode</span><span class="token punctuation">:</span> <span class="token string">"49855"</span>
+        <span class="token attr-name">country</span><span class="token punctuation">:</span> <span class="token string">"US"</span>
+        <span class="token attr-name">countryArea</span><span class="token punctuation">:</span> <span class="token string">"MI"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    checkout <span class="token punctuation">{</span>
+      id
+      totalPrice <span class="token punctuation">{</span>
+        gross <span class="token punctuation">{</span>
+          amount
+          currency
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      isShippingRequired
+      availableShippingMethods <span class="token punctuation">{</span>
+        id
+        name
+      <span class="token punctuation">}</span>
+      availablePaymentGateways
+    <span class="token punctuation">}</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>We get a newly created checkout object for which we return the ID, total price, and  list of available shipping and payment methods:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"checkoutCreate"</span>: {
+      <span class="hljs-attr">"checkout"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"Q2hlY2tvdXQ6ZmE5ZjBkMjYtMWM3NC00MDgyLTk3MzktYTIxOGE2NzVjMDZk"</span>,
+        <span class="hljs-attr">"totalPrice"</span>: {
+          <span class="hljs-attr">"gross"</span>: {
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">20</span>,
+            <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+          }
+        },
+        <span class="hljs-attr">"isShippingRequired"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"availableShippingMethods"</span>: [
+          {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"U2hpcHBpbmdNZXRob2Q6MTM="</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"UPS"</span>
+          },
+          {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"U2hpcHBpbmdNZXRob2Q6MTI="</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"DHL"</span>
+          }
+        ],
+        <span class="hljs-attr">"availablePaymentGateways"</span>: [<span class="hljs-string">"BRAINTREE"</span>]
+      },
+      <span class="hljs-attr">"errors"</span>: []
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setting-the-shipping-method"></a><a href="#setting-the-shipping-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting the shipping method</h2>
+<p>This step is only used if purchased items require shipping (if they are physical products). The user must select a specific shipping method to create shipping for this checkout. To signify whether shipping is required, use the <code>isShippingRequired</code> field in the <code>Checkout</code> object.</p>
+<p>Use the <code>checkoutShippingMethodUpdate</code> method to effectively pair the specific <code>CHECKOUT</code> object with the specified shipping method selected by the user.</p>
+<p>This operation requires the following input:</p>
+<ul>
+<li><p><code>checkoutId</code> - checkout ID that can be obtained from the <code>id</code> field in the <code>Checkout</code> object</p></li>
+<li><p><code>shippingMethodId</code> - shipping method ID, obtained from <code>availableShippingMethods</code> in the <code>Checkout</code> object</p></li>
+</ul>
+<p>In the following mutation, we assign a shipping method to the checkout using IDs from the previous example. Note that for the checkout object we want to get back the update <code>totalPrice</code> including shipping costs:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  checkoutShippingMethodUpdate<span class="token punctuation">(</span>
+    <span class="token attr-name">checkoutId</span><span class="token punctuation">:</span> <span class="token string">"Q2hlY2tvdXQ6ZmE5ZjBkMjYtMWM3NC00MDgyLTk3MzktYTIxOGE2NzVjMDZk"</span>
+    <span class="token attr-name">shippingMethodId</span><span class="token punctuation">:</span> <span class="token string">"U2hpcHBpbmdNZXRob2Q6MTM="</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    checkout <span class="token punctuation">{</span>
+      id
+      shippingMethod <span class="token punctuation">{</span>
+        name
+      <span class="token punctuation">}</span>
+      totalPrice <span class="token punctuation">{</span>
+        gross <span class="token punctuation">{</span>
+          amount
+          currency
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As a result, we get an updated checkout object with a shipping method set:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"checkoutShippingMethodUpdate"</span>: {
+      <span class="hljs-attr">"checkout"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"Q2hlY2tvdXQ6ZmE5ZjBkMjYtMWM3NC00MDgyLTk3MzktYTIxOGE2NzVjMDZk"</span>,
+        <span class="hljs-attr">"shippingMethod"</span>: {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"UPS"</span>
+        },
+        <span class="hljs-attr">"totalPrice"</span>: {
+          <span class="hljs-attr">"gross"</span>: {
+            <span class="hljs-attr">"amount"</span>: <span class="hljs-number">25.99</span>,
+            <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>
+          }
+        }
+      },
+      <span class="hljs-attr">"errors"</span>: []
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="creating-the-payment"></a><a href="#creating-the-payment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating the payment</h2>
+<p>The payment creation process consists of two operations:</p>
+<ol>
+<li><p>Generating a token for the payment using the <code>paymentClientToken</code> query.
+This operation requires the user to select the preferred payment gateway.</p></li>
+<li><p>Executing the mutation <code>checkoutPaymentCreate</code> using the above-generated token.</p></li>
+</ol>
+<p>Depending on the selected payment gateway, you will either use the JavaScript form which can be integrated to MajorityWorld, or the payment gateway will direct you to an external payment page. The payment gateway sends information about if the payment is successful, along with tokenized credit card payment information. This token is then used to run the <code>checkoutPaymentCreate</code> mutation.</p>
+<h3><a class="anchor" aria-hidden="true" id="paymentclienttoken"></a><a href="#paymentclienttoken" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>paymentClientToken</code></h3>
+<p>The <code>paymentClientToken</code> query requires one input field:</p>
+<ul>
+<li><code>gateway</code> - an enum value which represents one of the payment gateways configured on the server, e.g. <code>BRAINTREE</code> or <code>STRIPE</code></li>
+</ul>
+<p>Example query:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">query</span> <span class="token punctuation">{</span>
+  paymentClientToken<span class="token punctuation">(</span><span class="token attr-name">gateway</span><span class="token punctuation">:</span> <span class="token constant">BRAINTREE</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As a result, we get the token (the value is trimmed for the sake of this example):</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"paymentClientToken"</span>: <span class="hljs-string">"eyJ2ZXJza...m9mZiJ9"</span>
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="checkoutpaymentcreate"></a><a href="#checkoutpaymentcreate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>checkoutPaymentCreate</code></h3>
+<p>The <code>checkoutPaymentCreate</code> mutation requires the following input:</p>
+<ul>
+<li><p><code>checkoutId</code> - checkout ID, similar to previous examples</p></li>
+<li><p><code>gateway</code> - name of the selected payment gateway, the same as that used with the <code>paymentClientToken</code> operation</p></li>
+<li><p><code>token</code> - client-side generated payment token</p></li>
+<li><p><code>amount</code> - total amount of this operation</p></li>
+</ul>
+<p>This mutation returns the following fields:</p>
+<ul>
+<li><p><code>checkout</code> - current checkout object</p></li>
+<li><p><code>payment</code> - represents the newly created payment object</p></li>
+<li><p><code>errors</code> - list of errors that may occur during mutation execution</p></li>
+</ul>
+<p>In the example below, we're creating a new Braintree payment for our checkout:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  checkoutPaymentCreate<span class="token punctuation">(</span>
+    <span class="token attr-name">checkoutId</span><span class="token punctuation">:</span> <span class="token string">"Q2hlY2tvdXQ6ZmE5ZjBkMjYtMWM3NC00MDgyLTk3MzktYTIxOGE2NzVjMDZk"</span>
+    <span class="token attr-name">input</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">gateway</span><span class="token punctuation">:</span> <span class="token constant">BRAINTREE</span>
+      <span class="token attr-name">token</span><span class="token punctuation">:</span> <span class="token string">"tokencc_bh_s3bjkh_24smq8_6c6zhq_w4v6b9_8vz"</span>
+      <span class="token attr-name">amount</span><span class="token punctuation">:</span> <span class="token number">25.99</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    payment <span class="token punctuation">{</span>
+      id
+      chargeStatus
+    <span class="token punctuation">}</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>As a result, we get the payment object:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"checkoutPaymentCreate"</span>: {
+      <span class="hljs-attr">"payment"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UGF5bWVudDox"</span>,
+        <span class="hljs-attr">"chargeStatus"</span>: <span class="hljs-string">"FULLY_CHARGED"</span>
+      },
+      <span class="hljs-attr">"errors"</span>: []
+    }
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="completing-the-checkout"></a><a href="#completing-the-checkout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Completing the Checkout</h2>
+<p>This operation requires only the checkout ID as an input. Its purpose is to ensure this checkout is correct. To do this, it verifies if:</p>
+<ul>
+<li><p>The required addresses are correct</p></li>
+<li><p>The products are in stock (while making the purchase, another user could already buy the last available item)</p></li>
+<li><p>The payment has been created successfully</p></li>
+</ul>
+<p>If these parameters are verified, then the checkout is transformed into an order and the customer receives a confirmation email.</p>
+<p>The <code>checkoutComplete</code> mutation requires the following input:</p>
+<ul>
+<li><code>checkoutId</code> - ID of the checkout to complete</li>
+</ul>
+<p>It returns the following output:</p>
+<ul>
+<li><code>order</code> - an order created from the checkout object</li>
+<li><code>errors</code> - list of errors that may occur during mutation execution</li>
+</ul>
+<p>Here is the example of a complete mutation:</p>
+<pre><code class="hljs css language-graphql"><span class="token keyword">mutation</span> <span class="token punctuation">{</span>
+  checkoutComplete<span class="token punctuation">(</span>
+    <span class="token attr-name">checkoutId</span><span class="token punctuation">:</span> <span class="token string">"Q2hlY2tvdXQ6ZmE5ZjBkMjYtMWM3NC00MDgyLTk3MzktYTIxOGE2NzVjMDZk"</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    order <span class="token punctuation">{</span>
+      id
+      status
+    <span class="token punctuation">}</span>
+    errors <span class="token punctuation">{</span>
+      field
+      message
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>A successful response would look like this:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"checkoutComplete"</span>: {
+      <span class="hljs-attr">"order"</span>: {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"T3JkZXI6MjU="</span>,
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"UNFULFILLED"</span>
+      },
+      <span class="hljs-attr">"errors"</span>: []
+    }
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/15/2019 by Nurul Ferdous</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#creating-the-checkout">Creating the Checkout</a></li><li><a href="#setting-the-shipping-method">Setting the shipping method</a></li><li><a href="#creating-the-payment">Creating the payment</a><ul class="toc-headings"><li><a href="#paymentclienttoken"><code>paymentClientToken</code></a></li><li><a href="#checkoutpaymentcreate"><code>checkoutPaymentCreate</code></a></li></ul></li><li><a href="#completing-the-checkout">Completing the Checkout</a></li></ul></nav></div><footer class="docs-footer"><div class="wrapper"><div class="docs-footer-top"><div class="newsletter"><span>Get updates from MajorityWorld:</span><div id="mc_embed_signup"><form action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"><div class="mc-field-group newsletter-input-wrapper"><input type="email" value="" name="EMAIL" class="required email newsletter-input" id="mce-EMAIL" placeholder="Email address"/><small></small><div class="clear"><input type="submit" value="Sign up" name="Sign up" id="mc-embedded-subscribe" class="newsletter-submit-button"/></div></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_8bd6297e7e63c06d9c242a92d_f8dadd63b8" tabindex="-1" value=""/></div></div></form></div><script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script></div><div class="social-icons"><span>Contact us:</span><a class="twitter-icon" href="https://twitter.com/MajorityWorld" target="_blank"><img src="/mw-docs/img/twitter-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="fb-icon" href="https://www.facebook.com/MajorityWorld/" target="_blank"><img src="/mw-docs/img/facebook-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="so-icon" href="https://spectrum.chat/MajorityWorld" target="_blank"><img src="/mw-docs/img/stackoverflow-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a><a class="github-icon" href="https://github.com/dynamicguy/MajorityWorld" target="_blank"><img src="/mw-docs/img/github-icon.svg" alt="MajorityWorld Documentation" height="29" width="30"/></a></div></div><div class="dosc-footer-copyrights"><div class="copyrights"><span>Copyright © 2019</span><span><a href="https://dynamicguy.com" target="_blank">Dynamic Guy</a></span></div><div class="dosc-footer-links"><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions" target="_blank">Terms of use</a><a href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/" target="_blank">Privacy policy</a></div></div><link rel="stylesheet" href="https://use.typekit.net/itf4hxr.css"/></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '5e79804ac3b7bb911008cfba457cba6a',
+                indexName: 'mw-docs',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
