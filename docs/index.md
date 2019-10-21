@@ -1,6 +1,6 @@
 ---
 id: index
-title: 
+title: Home
 ---
 
 # Welcome to **MajorityWorld Docs**

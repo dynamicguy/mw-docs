@@ -1,17 +1,16 @@
 /* your custom css */
 body {
-  color: #3c3e4c;
-  font-family: $inter;
+    color: #3c3e4c;
 }
 
 .button {
-  color: #525f7f;
-  border: 1px solid #525f7f;
+    color: #525f7f;
+    border: 1px solid #525f7f;
 }
 
 .button:hover {
-  background: #edf5f8;
-  color: inherit;
+    background: #edf5f8;
+    color: inherit;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
@@ -27,4 +26,21 @@ body {
 }
 
 @media only screen and (min-width: 1500px) {
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.fixedHeaderContainer {
+    background: #2196f3;
+}
+
+.fixedHeaderContainer header {
+    padding: 10px;
+}
+
+.navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li > a:focus, .navigationSlider .slidingNav ul li > a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive > a, .navigationSlider .slidingNav ul li.siteNavGroupActive > a {
+    background: transparent;
+    color: #333;
 }

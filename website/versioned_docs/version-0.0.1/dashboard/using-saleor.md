@@ -36,10 +36,10 @@ The dashboard is split into sections where you can complete different tasks. The
 
 The dashboard has the following sections:
 
-- [Home](/docs/dashboard/home): A handy overview of recent activity and performance
-- [Catalog](/docs/dashboard/catalog/intro): Your products, viewed individually or grouped by collection or category
-- [Orders](/docs/dashboard/orders): A full view of current and past orders
-- [Customers](/docs/dashboard/customers): Your customer database, with specific details for each buyer
-- [Discounts](/docs/dashboard/discounts/sales): Give your customers great sales offers or discount vouchers
-- [Translations](/docs/dashboards/translations): Translate dynamic content in your MajorityWorld store
-- [Configure](/docs/dashboard/configuration/intro): Manage all the administration elements of your dashboard and processes like tax automation and shipping
+- [Home](/mw-docs/docs/dashboard/home): A handy overview of recent activity and performance
+- [Catalog](/mw-docs/docs/dashboard/catalog/intro): Your products, viewed individually or grouped by collection or category
+- [Orders](/mw-docs/docs/dashboard/orders): A full view of current and past orders
+- [Customers](/mw-docs/docs/dashboard/customers): Your customer database, with specific details for each buyer
+- [Discounts](/mw-docs/docs/dashboard/discounts/sales): Give your customers great sales offers or discount vouchers
+- [Translations](/mw-docs/docs/dashboards/translations): Translate dynamic content in your MajorityWorld store
+- [Configure](/mw-docs/docs/dashboard/configuration/intro): Manage all the administration elements of your dashboard and processes like tax automation and shipping

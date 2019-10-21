@@ -6,7 +6,7 @@ original_id: installation-linux
 
 > **Note**
 > 
-> If you prefer using containers or have problems with configuring PostgreSQL, Redis and Elasticsearch, try [Using Docker for Development](/docs/customization/docker) instructions.
+> If you prefer using containers or have problems with configuring PostgreSQL, Redis and Elasticsearch, try [Using Docker for Development](/mw-docs/docs/customization/docker) instructions.
 
 
 ## Prerequisites

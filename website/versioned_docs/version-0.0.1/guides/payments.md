@@ -280,7 +280,7 @@ def process_payment(
 
 ## Handling errors
 
-Gateway-specific errors should be parsed to MajorityWorld’s universal format. More on this can be found in [Payments Architecture](/docs/architecture/payments).
+Gateway-specific errors should be parsed to MajorityWorld’s universal format. More on this can be found in [Payments Architecture](/mw-docs/docs/architecture/payments).
 
 
 ## Adding payment method to the old checkout (optional)

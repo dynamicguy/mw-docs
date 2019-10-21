@@ -6,21 +6,21 @@ original_id: intro
 ---
 
 [card-grid]
-[**Search Engine Optimization (SEO)**](/docs/integrations/seo)
-[**Social Media Optimization (SMO)**](/docs/integrations/smo)
+[**Search Engine Optimization (SEO)**](/mw-docs/docs/integrations/seo)
+[**Social Media Optimization (SMO)**](/mw-docs/docs/integrations/smo)
 [/card-grid]
 
 [card-grid]
-[**Email Markup**](/docs/integrations/email-markup)
-[**Elasticsearch**](/docs/integrations/elasticsearch)
+[**Email Markup**](/mw-docs/docs/integrations/email-markup)
+[**Elasticsearch**](/mw-docs/docs/integrations/elasticsearch)
 [/card-grid]
 
 [card-grid]
-[**Google Analytics**](/docs/integrations/googleanalytics)
-[**Google for Retail**](/docs/integrations/googleforretail)
+[**Google Analytics**](/mw-docs/docs/integrations/googleanalytics)
+[**Google for Retail**](/mw-docs/docs/integrations/googleforretail)
 [/card-grid]
 
 [card-grid]
-[**Open Exchange Rates**](/docs/integrations/openexchangerates)
-[**Error tracking with Sentry**](/docs/integrations/sentry)
+[**Open Exchange Rates**](/mw-docs/docs/integrations/openexchangerates)
+[**Error tracking with Sentry**](/mw-docs/docs/integrations/sentry)
 [/card-grid]

@@ -6,40 +6,40 @@ original_id: intro
 ---
 
 [card-grid]
-[**Handling Money Amounts**](/docs/architecture/money)
-[**Product Structure**](/docs/architecture/products)
+[**Handling Money Amounts**](/mw-docs/docs/architecture/money)
+[**Product Structure**](/mw-docs/docs/architecture/products)
 [/card-grid]
 
 [card-grid]
-[**Thumbnails**](/docs/architecture/thumbnails)
-[**Stock Management**](/docs/architecture/stock)
+[**Thumbnails**](/mw-docs/docs/architecture/thumbnails)
+[**Stock Management**](/mw-docs/docs/architecture/stock)
 [/card-grid]
 
 [card-grid]
-[**Order Management**](/docs/architecture/orders)
-[**Events**](/docs/architecture/events)
+[**Order Management**](/mw-docs/docs/architecture/orders)
+[**Events**](/mw-docs/docs/architecture/events)
 [/card-grid]
 
 [card-grid]
-[**Internationalization**](/docs/architecture/i18n)
-[**Model Translations**](/docs/architecture/translations)
+[**Internationalization**](/mw-docs/docs/architecture/i18n)
+[**Model Translations**](/mw-docs/docs/architecture/translations)
 [/card-grid]
 
 [card-grid]
-[**Search**](/docs/architecture/search)
-[**Payments Architecture**](/docs/architecture/payments)
+[**Search**](/mw-docs/docs/architecture/search)
+[**Payments Architecture**](/mw-docs/docs/architecture/payments)
 [/card-grid]
 
 [card-grid]
-[**Shippings**](/docs/architecture/shippings)
-[**Site Settings**](/docs/architecture/settings)
+[**Shippings**](/mw-docs/docs/architecture/shippings)
+[**Site Settings**](/mw-docs/docs/architecture/settings)
 [/card-grid]
 
 [card-grid]
-[**Pages**](/docs/architecture/page)
-[**GDPR Compliance**](/docs/architecture/gdpr)
+[**Pages**](/mw-docs/docs/architecture/page)
+[**GDPR Compliance**](/mw-docs/docs/architecture/gdpr)
 [/card-grid]
 
 [card-grid]
-[**GraphQL API (Beta)**](/docs/architecture/graphql)
+[**GraphQL API (Beta)**](/mw-docs/docs/architecture/graphql)
 [/card-grid]

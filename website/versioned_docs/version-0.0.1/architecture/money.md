@@ -9,7 +9,7 @@ MajorityWorld uses the [Prices](https://github.com/dynamicguy/prices/) and [djan
 
 ## Default currency
 
-All prices are entered and stored in a single default currency controlled by the [`DEFAULT_CURRENCY`](/docs/getting-started/configuration#default_currency) settings key. MajorityWorld can display prices in a user’s local currency (see [Open Exchange Rates](/docs/integrations/openexchangerates)) but all purchases are charged in the default currency.
+All prices are entered and stored in a single default currency controlled by the [`DEFAULT_CURRENCY`](/mw-docs/docs/getting-started/configuration#default_currency) settings key. MajorityWorld can display prices in a user’s local currency (see [Open Exchange Rates](/mw-docs/docs/integrations/openexchangerates)) but all purchases are charged in the default currency.
 
 > **Warning**
 >
