@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>MajorityWorld Documentation Blog</title>
+        <title>DrikGallery Documentation Blog</title>
         <link>https://dynamicguy.github.io/mw-docs/blog</link>
-        <description>The best place to stay up-to-date with the latest MajorityWorld Documentation news and events.</description>
+        <description>The best place to stay up-to-date with the latest DrikGallery Documentation news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>MajorityWorld Documentation Blog</title>
+            <title>DrikGallery Documentation Blog</title>
             <url>https://dynamicguy.github.io/mw-docs/img/saleor-logo.svg</url>
             <link>https://dynamicguy.github.io/mw-docs/blog</link>
         </image>
