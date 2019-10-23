@@ -22,4 +22,4 @@ You can also test against all supported versions of Django and Python by using [
 $ tox
 ```
 
-This is usually only required when you want to contribute your changes back to MajorityWorld. 
+This is usually only required when you want to contribute your changes back to DrikGallery. 

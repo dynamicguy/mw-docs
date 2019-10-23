@@ -4,7 +4,7 @@ title: Shippings
 original_id: shippings
 ---
 
-MajorityWorld uses the concept of Shipping Zones and Shipping Methods to fulfill the shipping process.
+DrikGallery uses the concept of Shipping Zones and Shipping Methods to fulfill the shipping process.
 
 
 ## Shipping Zones

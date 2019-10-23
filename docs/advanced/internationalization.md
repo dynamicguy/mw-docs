@@ -7,7 +7,7 @@ title: Internationalization and Translation
 
 ### Data formats
 
-MajorityWorld uses [Babel](http://babel.pocoo.org/en/latest/) as the interface to Unicode’s CLDR library to provide accurate number and date formatting, as well as proper currency designation.
+DrikGallery uses [Babel](http://babel.pocoo.org/en/latest/) as the interface to Unicode’s CLDR library to provide accurate number and date formatting, as well as proper currency designation.
 
 
 ### Address forms
@@ -18,7 +18,7 @@ It also handles the address validation so you do not need to know how to address
 
 ### Currency conversion
 
-MajorityWorld is able to use currency exchange rate data to show a price estimations in the customer’s local currency. 
+DrikGallery is able to use currency exchange rate data to show a price estimations in the customer’s local currency. 
 
 #### How to configure Open Exchange Rates
 
@@ -47,7 +47,7 @@ $ python manage.py update_exchange_rates --all
 
 ### Phone number format
 
-MajorityWorld is able to use [Google’s `libphonenumber` library](https://github.com/googlei18n/libphonenumber) to ensure that the phone numbers provided by your customers are correct. 
+DrikGallery is able to use [Google’s `libphonenumber` library](https://github.com/googlei18n/libphonenumber) to ensure that the phone numbers provided by your customers are correct. 
 You need to choose the prefix and type the number separately. 
 Regardless of which country has been selected, you may enter the phone number for any country format.
 
@@ -58,21 +58,21 @@ GeoIP is used to determine the visitor’s country and their local currency.
 
 > **Note**
 >
-> MajorityWorld uses Transifex to coordinate translations. 
+> DrikGallery uses Transifex to coordinate translations. 
 > If you wish to help, head to the [translation dashboard](https://www.transifex.com/dynamicguy/saleor-1/).
 >
 > All translations are handled by the community. Translation teams are open and everyone is welcome to request a new language.
 
 
-MajorityWorld uses `gettext` for translation. This is an industry standard for translating software and it is the most common way to translate Django applications.
+DrikGallery uses `gettext` for translation. This is an industry standard for translating software and it is the most common way to translate Django applications.
 
-MajorityWorld’s storefront and dashboard are both prepared for translation. 
+DrikGallery’s storefront and dashboard are both prepared for translation. 
 The storefront and dashboard use unconnected translation domains and can be translated separately. 
 Additionally, all translation strings are equipped with context description to make translation easier and more accurate.
 
 ### Model Translation
 
-MajorityWorld enables you to translate database content (for example, product descriptions). 
+DrikGallery enables you to translate database content (for example, product descriptions). 
 
 > **Note**
 >

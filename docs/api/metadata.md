@@ -3,7 +3,7 @@ id: metadata
 title: Extending Models Using Metadata
 ---
 
-MajorityWorld gives you the possibility to customize your shop without changes in the code. Once you get your own MajorityWorld instance, you can extend most of MajorityWorld's database models using metadata. 
+DrikGallery gives you the possibility to customize your shop without changes in the code. Once you get your own DrikGallery instance, you can extend most of DrikGallery's database models using metadata. 
 
 For example, you can add specific fields to the metadata of objects to store extra information on that object. By using metadata, you can also customize the way your storefront appears to your customers. 
 

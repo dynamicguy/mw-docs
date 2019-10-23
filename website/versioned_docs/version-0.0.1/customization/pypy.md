@@ -4,7 +4,7 @@ title: Running with PyPy 3.5
 original_id: pypy
 ---
 
-MajorityWorld works well with PyPy 3.5 and using it is an option when additional performance is required.
+DrikGallery works well with PyPy 3.5 and using it is an option when additional performance is required.
 
 The default PostgreSQL driver is not compatible with PyPy so you will need to replace it with a `cffi`-based one.
 

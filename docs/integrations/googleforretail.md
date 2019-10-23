@@ -3,7 +3,7 @@ id: googleforretail
 title: Google for Retail
 ---
 
-MajorityWorld is equipped with tools for generating product feeds to be used with Google Merchant Center. The resulting file is a compressed CSV and it is saved in a location specified by the `saleor.data_feeds.google_merchant.FILE_PATH` variable.
+DrikGallery is equipped with tools for generating product feeds to be used with Google Merchant Center. The resulting file is a compressed CSV and it is saved in a location specified by the `saleor.data_feeds.google_merchant.FILE_PATH` variable.
 
 To generate a feed, use the following command:
 

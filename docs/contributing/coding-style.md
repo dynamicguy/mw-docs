@@ -3,7 +3,7 @@ id: coding-style
 title: Coding Style
 ---
 
-MajorityWorld uses various tools to maintain a common coding style and help with development. 
+DrikGallery uses various tools to maintain a common coding style and help with development. 
 To install all the development tools, run the following commands:
 
 ```console
@@ -16,7 +16,7 @@ or if using `poetry`:
 $ poetry install
 ```
 
-MajorityWorld uses the [pre-commit](https://pre-commit.com/#install) tool to check and automatically fix any formatting issue before creating a git commit.
+DrikGallery uses the [pre-commit](https://pre-commit.com/#install) tool to check and automatically fix any formatting issue before creating a git commit.
 
 Run the following command to install pre-commit into your git hooks and have it run on every commit:
 
@@ -32,7 +32,7 @@ Always follow [PEP 8](https://www.python.org/dev/peps/pep-0008/), but keep consi
 
 The only difference with PEP 8 is that we use an 88 character line limit instead of 79.
 
-In addition, MajorityWorld uses the [black formatting tool](https://github.com/python/black) which comes with its own rules. A few of them are presented below.
+In addition, DrikGallery uses the [black formatting tool](https://github.com/python/black) which comes with its own rules. A few of them are presented below.
 
 
 ### String literals

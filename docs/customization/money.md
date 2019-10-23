@@ -3,12 +3,12 @@ id: money
 title: Handling Money Amounts
 ---
 
-MajorityWorld uses the [Prices](https://github.com/dynamicguy/prices/) and [django-prices](https://github.com/dynamicguy/django-prices/) libraries to store, calculate, and display amounts of money, prices, and price ranges, as well as [django-prices-vatlayer](https://github.com/dynamicguy/django-prices-vatlayer) to optionally handle VAT tax rates in the European Union.
+DrikGallery uses the [Prices](https://github.com/dynamicguy/prices/) and [django-prices](https://github.com/dynamicguy/django-prices/) libraries to store, calculate, and display amounts of money, prices, and price ranges, as well as [django-prices-vatlayer](https://github.com/dynamicguy/django-prices-vatlayer) to optionally handle VAT tax rates in the European Union.
 
 
 ## Default currency
 
-All prices are entered and stored in a single default currency controlled by the [`DEFAULT_CURRENCY`](customization/environment-variables.md#default_currency) settings key. MajorityWorld can display prices in a user’s local currency (see [Open Exchange Rates](integrations/openexchangerates.md)). However, all purchases are charged in the default currency.
+All prices are entered and stored in a single default currency controlled by the [`DEFAULT_CURRENCY`](customization/environment-variables.md#default_currency) settings key. DrikGallery can display prices in a user’s local currency (see [Open Exchange Rates](integrations/openexchangerates.md)). However, all purchases are charged in the default currency.
 
 > **Warning**
 >
@@ -17,7 +17,7 @@ All prices are entered and stored in a single default currency controlled by the
 
 ## Money amount instances
 
-In MajorityWorld’s codebase, money amounts exist either as `Money` or `TaxedMoney` instances.
+In DrikGallery’s codebase, money amounts exist either as `Money` or `TaxedMoney` instances.
 
 `Money` is a type representing the amount of money in a specific currency. For example, 100 USD is represented by `Money(100, “USD”)`. 
 This type does not hold any additional information useful for commerce but, unlike Decimal, it implements safeguards and checks for the calculation and comparison of monetary values.

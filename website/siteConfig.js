@@ -21,8 +21,8 @@ const users = [
 // site configuration options.
 
 const siteConfig = {
-    title: "MajorityWorld Documentation", // Title for your website.
-    tagline: "MW e-commerce storefront docs",
+    title: "DrikGallery Documentation", // Title for your website.
+    tagline: "DrikGallery e-commerce storefront docs",
     disableTitleTagline: false,
     url: "https://dynamicguy.github.io", // Your website URL
     baseUrl: "/mw-docs/", // Base URL for your project */

@@ -6,7 +6,7 @@ title: Installation for macOS
 
 ## Prerequisites
 
-Before you are ready to run MajorityWorld, you will need additional software installed on your computer.
+Before you are ready to run DrikGallery, you will need additional software installed on your computer.
 
 
 ### Node.js
@@ -16,7 +16,7 @@ Version 10 or later is required. Download the macOS installer from the [Node.js 
 
 ### PostgreSQL
 
-MajorityWorld needs PostgreSQL version 9.4 or above to work. Get the macOS installer from the [PostgreSQL download page](https://www.postgresql.org/download/macosx/).
+DrikGallery needs PostgreSQL version 9.4 or above to work. Get the macOS installer from the [PostgreSQL download page](https://www.postgresql.org/download/macosx/).
 
 
 ### Command line tools for Xcode
@@ -64,7 +64,7 @@ $ brew install cairo pango gdk-pixbuf libffi
 
 ## Installation
 
-Once you have installed or updated the pre-requisite software, you are ready for your MajorityWorld installation. Follow the steps below to start and execute the process:
+Once you have installed or updated the pre-requisite software, you are ready for your DrikGallery installation. Follow the steps below to start and execute the process:
 
 ### 1. Clone the repository (or use your own fork)
 

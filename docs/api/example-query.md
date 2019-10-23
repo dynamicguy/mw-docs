@@ -5,7 +5,7 @@ title: Example Query - Making Your First Call
 
 There are many ways of communicating with a GraphQL API. You can use a low-level HTTP client like cURL or a dedicated client for the programming language or framework of your choice. The most convenient tool for testing the API and forming queries is Playground. It is an interactive editor which supports features such us autocompletion, error highlighting, setting HTTP headers, and instant access to API documentation in the sidebar.
 
-Let's take a look at an example query and mutation that you can use in the MajorityWorld GraphQL API.
+Let's take a look at an example query and mutation that you can use in the DrikGallery GraphQL API.
 
 ## Example query
 
@@ -73,7 +73,7 @@ The server returns the following JSON:
 
 ## Example mutation
 
-Let's look at an example of a mutation. Imagine that you want to update the name of a product. In the MajorityWorld API, this can be done with the `productUpdate` mutation:
+Let's look at an example of a mutation. Imagine that you want to update the name of a product. In the DrikGallery API, this can be done with the `productUpdate` mutation:
 
 ```graphql
 mutation {
@@ -109,4 +109,4 @@ The successful server response for the mutation is:
 
 > **Note**
 >
-> To perform the `productUpdate` mutation, you need to be authenticated as an admin user with permission to manage products. See how authentication works in the MajorityWorld API in the [Authentication](api/authenticate.md) section.
+> To perform the `productUpdate` mutation, you need to be authenticated as an admin user with permission to manage products. See how authentication works in the DrikGallery API in the [Authentication](api/authenticate.md) section.

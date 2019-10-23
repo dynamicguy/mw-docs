@@ -8,7 +8,7 @@ original_id: elasticsearch
 
 Elasticsearch search backend requires an Elasticsearch server. For the installation guide, please refer to the [official documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).
 
-Integration can be configured with set of environment variables. When you’re deploying on Heroku - you can use add-on that provides Elasticsearch as a service. By default MajorityWorld uses Elasticsearch 6.3.
+Integration can be configured with set of environment variables. When you’re deploying on Heroku - you can use add-on that provides Elasticsearch as a service. By default DrikGallery uses Elasticsearch 6.3.
 
 If you’re deploying somewhere else, you can use one of following services:
 
@@ -27,7 +27,7 @@ URL to elasticsearch engine. If it’s empty - search will be not available.
 
 ## Data indexing
 
-MajorityWorld uses [Django Elasticsearch DSL](https://github.com/sabricot/django-elasticsearch-dsl) as a wrapper for [Elasticsearch DSL](https://github.com/elastic/elasticsearch-dsl-py) to enable automatic indexing and sync. Indexes are defined in [documents](https://github.com/saleor/saleor/search/documents.py) file. Please refer to documentation of above projects for further help.
+DrikGallery uses [Django Elasticsearch DSL](https://github.com/sabricot/django-elasticsearch-dsl) as a wrapper for [Elasticsearch DSL](https://github.com/elastic/elasticsearch-dsl-py) to enable automatic indexing and sync. Indexes are defined in [documents](https://github.com/saleor/saleor/search/documents.py) file. Please refer to documentation of above projects for further help.
 
 Initial search index can be created with following command:
 

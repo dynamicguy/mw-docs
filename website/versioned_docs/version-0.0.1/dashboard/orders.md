@@ -4,7 +4,7 @@ title: Orders
 original_id: orders
 ---
 
-The Orders section shows you all orders placed through the MajorityWorld system by customers, as well as those created manually by administrators.
+The Orders section shows you all orders placed through the DrikGallery system by customers, as well as those created manually by administrators.
 
 
 ## Order Management
@@ -53,7 +53,7 @@ If you have a tracking number for the package, add it in the field below the pro
 ### How to Cancel a Shipment
 
 - Click the three dots in the top right corner of a Fulfilled order card
-- Select [[Cancel&nbsp;Shipment]] when the pop-up appears, then confirm. Items will be restocked into the MajorityWorld system
+- Select [[Cancel&nbsp;Shipment]] when the pop-up appears, then confirm. Items will be restocked into the DrikGallery system
 
 ![Canceling shipment](assets/dashboard-orders/6.jpg)
 

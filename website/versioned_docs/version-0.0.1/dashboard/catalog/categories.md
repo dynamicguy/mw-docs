@@ -4,7 +4,7 @@ title: Categories
 original_id: categories
 ---
 
-Products on the MajorityWorld platform can be sorted by category if you sell a range of items.
+Products on the DrikGallery platform can be sorted by category if you sell a range of items.
 
 
 ## Adding a Category

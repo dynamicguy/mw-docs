@@ -10,7 +10,7 @@ To guarantee repeatable installations, all project dependencies are managed usin
 Running `poetry lock` generates `poetry.lock` which has all versions pinned.
 
 You can install Poetry by using `pip install --pre poetry` or by following the official installation guide [here](https://github.com/sdispater/poetry#installation).
-We recommend a pre-release version of `1.0.0b` that contains many fixes and features that MajorityWorld relies on. Other versions might not work as expected.
+We recommend a pre-release version of `1.0.0b` that contains many fixes and features that DrikGallery relies on. Other versions might not work as expected.
 
 
 

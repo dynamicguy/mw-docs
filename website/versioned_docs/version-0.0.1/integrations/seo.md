@@ -4,7 +4,7 @@ title: Search Engine Optimization (SEO)
 original_id: seo
 ---
 
-Out of the box MajorityWorld will automatically handle certain aspects of how search engines see and index your products.
+Out of the box DrikGallery will automatically handle certain aspects of how search engines see and index your products.
 
 
 ## Sitemaps

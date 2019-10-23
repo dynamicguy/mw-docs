@@ -3,9 +3,9 @@ id: pagination
 title: Pagination
 ---
 
-Pagination is required in most queries which return lists of items in the MajorityWorld GraphQL API. This limits the number of results returned by the server to a more manageable size and avoids data flow disruptions. 
+Pagination is required in most queries which return lists of items in the DrikGallery GraphQL API. This limits the number of results returned by the server to a more manageable size and avoids data flow disruptions. 
 
-MajorityWorld uses cursor-based pagination. 
+DrikGallery uses cursor-based pagination. 
 
 There are two types of lists in GraphQL:
 
@@ -19,7 +19,7 @@ Pagination is used to help you handle large amounts of items returned by the con
 
 > **Note**
 >
-> MajorityWorld allows a maximum of 100 items per request.
+> DrikGallery allows a maximum of 100 items per request.
 
 ## Nodes and cursors
 

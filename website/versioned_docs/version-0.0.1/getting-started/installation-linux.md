@@ -11,12 +11,12 @@ original_id: installation-linux
 
 ## Prerequisites
 
-Before you are ready to run MajorityWorld you will need additional software installed on your computer.
+Before you are ready to run DrikGallery you will need additional software installed on your computer.
 
 
 ### Python 3
 
-MajorityWorld requires Python 3.6 or later. A compatible version comes preinstalled with most current Linux systems. If that is not the case consult your distribution for instructions on how to install Python 3.6 or 3.7.
+DrikGallery requires Python 3.6 or later. A compatible version comes preinstalled with most current Linux systems. If that is not the case consult your distribution for instructions on how to install Python 3.6 or 3.7.
 
 
 ### Node.js
@@ -26,7 +26,7 @@ Version 10 or later is required. See the [installation instructions](https://nod
 
 ### PostgreSQL
 
-MajorityWorld needs PostgreSQL version 9.4 or above to work. Use the [PostgreSQL download page](https://www.postgresql.org/download/) to get instructions for your distribution.
+DrikGallery needs PostgreSQL version 9.4 or above to work. Use the [PostgreSQL download page](https://www.postgresql.org/download/) to get instructions for your distribution.
 
 
 ### GTK+

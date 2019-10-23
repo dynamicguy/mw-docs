@@ -4,11 +4,11 @@ title: Orders
 ---
 ## Introduction
 
-The Orders section shows you all orders placed through the MajorityWorld system by customers, as well as those created manually by administrators. An order is created once a customer completes the checkout process.
+The Orders section shows you all orders placed through the DrikGallery system by customers, as well as those created manually by administrators. An order is created once a customer completes the checkout process.
 
 ## Order types
 
-There are essentially two order types in MajorityWorld:
+There are essentially two order types in DrikGallery:
 
 * Regular orders - Orders created by your customers.
 
@@ -86,7 +86,7 @@ Note, that the card may be charged in the timeframe between few days to a month 
 
 This is very useful when an exact price cannot be determined until after the order is prepared, or you want to capture the money as soon as you ship the order. It is also useful if you prefer to manually screen orders for fraud attempts.
 
-When viewing orders with pre-authorized payments, MajorityWorld offers options to either capture or void the funds. You can capture the full or partial amount (for example, taking only partial payment for an item due to damage, late delivery, or customer service issues) by clicking [[Capture]] in the bottom right corner and then confirming the full amount or changing the price to the new amount agreed with the customer.
+When viewing orders with pre-authorized payments, DrikGallery offers options to either capture or void the funds. You can capture the full or partial amount (for example, taking only partial payment for an item due to damage, late delivery, or customer service issues) by clicking [[Capture]] in the bottom right corner and then confirming the full amount or changing the price to the new amount agreed with the customer.
 
 ![Order with captured payment](assets/dashboard-orders/orders9.JPG)
 
@@ -158,7 +158,7 @@ If you have a tracking number for the package, add it in the field below the pro
 
 ### How to cancel an order
 
-Click the three dots in the top right corner of a Fulfilled order card. Select [[Cancel&nbsp;order]] when the pop-up appears, then confirm. Items will be restocked into the MajorityWorld system.
+Click the three dots in the top right corner of a Fulfilled order card. Select [[Cancel&nbsp;order]] when the pop-up appears, then confirm. Items will be restocked into the DrikGallery system.
 
 ![Canceling shipment](assets/dashboard-orders/orders6.JPG)
 

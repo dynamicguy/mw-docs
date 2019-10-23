@@ -16,7 +16,7 @@ To run backend tests use [pytest](https://docs.pytest.org/en/latest/):
 $ py.test
 ```
 
-You can also test against all supported versions of Django and Python. This is usually only required if you want to contribute your changes back to MajorityWorld. To do so you can use [Tox](https://tox.readthedocs.io/en/latest/):
+You can also test against all supported versions of Django and Python. This is usually only required if you want to contribute your changes back to DrikGallery. To do so you can use [Tox](https://tox.readthedocs.io/en/latest/):
 
 ```console
 $ tox

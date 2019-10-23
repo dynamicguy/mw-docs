@@ -9,7 +9,7 @@ Before filling your shop with products we need to introduce 3 product concepts -
 
 ## Overview
 
-Consider a book store. One of your products is a book titled “Introduction to MajorityWorld”.
+Consider a book store. One of your products is a book titled “Introduction to DrikGallery”.
 
 The book is available in hard and soft cover, so there would be _2 product variants_.
 

@@ -4,12 +4,12 @@ title: Extensions
 original_id: extensions
 ---
 
-MajorityWorld has implemented extensions architecture. It includes hooks for most basic operations like calculation of prices in the checkout or calling some actions when an order has been created.
+DrikGallery has implemented extensions architecture. It includes hooks for most basic operations like calculation of prices in the checkout or calling some actions when an order has been created.
 
 
 ## Plugin
 
-MajorityWorld has some plugins implemented by default. These plugins are located in `saleor.core.extensions.plugins`. The ExtensionManager needs to receive a list of enabled plugins. It can be done by including the Python plugin path in the `settings.PLUGINS` list.
+DrikGallery has some plugins implemented by default. These plugins are located in `saleor.core.extensions.plugins`. The ExtensionManager needs to receive a list of enabled plugins. It can be done by including the Python plugin path in the `settings.PLUGINS` list.
 
 
 ### Writing Your Own Plugin
@@ -58,7 +58,7 @@ PLUGINS = ["saleor.core.extensions.plugins.custom.CustomPlugin", ]
 
 ## `ExtensionsManager`
 
-`ExtensionsManager` is located in the `saleor.core.extensions.base_plugin`. It is a class responsible for handling all declared plugins and serving a response from them. It serves a default response in case of a non-declared plugin. There is a possibility to overwrite an `ExtensionsManager` class by implementing it on its own. MajorityWorld will discover the manager class by taking the declared path from `settings.EXTENSIONS_MANAGER`. Each Django request object has its own manager included as the `extensions` field. It is attached in the MajorityWorld middleware.
+`ExtensionsManager` is located in the `saleor.core.extensions.base_plugin`. It is a class responsible for handling all declared plugins and serving a response from them. It serves a default response in case of a non-declared plugin. There is a possibility to overwrite an `ExtensionsManager` class by implementing it on its own. DrikGallery will discover the manager class by taking the declared path from `settings.EXTENSIONS_MANAGER`. Each Django request object has its own manager included as the `extensions` field. It is attached in the DrikGallery middleware.
 
 
 ## BasePlugin
@@ -68,7 +68,7 @@ PLUGINS = ["saleor.core.extensions.plugins.custom.CustomPlugin", ]
 
 ## Celery Tasks
 
-Some plugin operations should be done asynchronously. If MajorityWorld has Celery enabled, it will discover all tasks declared in tasks.py in the plugin directories.
+Some plugin operations should be done asynchronously. If DrikGallery has Celery enabled, it will discover all tasks declared in tasks.py in the plugin directories.
 
 
 ### `plugin.py`

@@ -4,7 +4,7 @@ original_id: api-reference
 title: API Reference
 ---
 
-This document describes all queries, mutations, and types available in the MajorityWorld GraphQL API.
+This document describes all queries, mutations, and types available in the DrikGallery GraphQL API.
 
 <!-- START graphql-markdown -->
 
@@ -830,7 +830,7 @@ List of the shop's attributes.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`, `slug`
 
@@ -841,7 +841,7 @@ Supported filter parameters:
 <td valign="top"><a href="#id">ID</a></td>
 <td>
 
-Return attributes for products belonging to the given category. DEPRECATED: Will be removed in MajorityWorld 2.10, use the `filter` field instead.
+Return attributes for products belonging to the given category. DEPRECATED: Will be removed in DrikGallery 2.10, use the `filter` field instead.
 
 </td>
 </tr>
@@ -850,7 +850,7 @@ Return attributes for products belonging to the given category. DEPRECATED: Will
 <td valign="top"><a href="#id">ID</a></td>
 <td>
 
-Return attributes for products belonging to the given collection. DEPRECATED: Will be removed in MajorityWorld 2.10, use the `filter` field instead.
+Return attributes for products belonging to the given collection. DEPRECATED: Will be removed in DrikGallery 2.10, use the `filter` field instead.
 
 </td>
 </tr>
@@ -940,7 +940,7 @@ List of the shop's categories.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`, `slug`, `description`, `parent__name`
 
@@ -1059,7 +1059,7 @@ Filtering options for collections.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`, `slug`
 
@@ -1142,7 +1142,7 @@ Filtering options for products.
 <td valign="top">[<a href="#attributescalar">AttributeScalar</a>]</td>
 <td>
 
-Filter products by attributes. DEPRECATED: Will be removed in MajorityWorld 2.10, use the `filter` field instead.
+Filter products by attributes. DEPRECATED: Will be removed in DrikGallery 2.10, use the `filter` field instead.
 
 </td>
 </tr>
@@ -1151,7 +1151,7 @@ Filter products by attributes. DEPRECATED: Will be removed in MajorityWorld 2.10
 <td valign="top">[<a href="#id">ID</a>]</td>
 <td>
 
-Filter products by category. DEPRECATED: Will be removed in MajorityWorld 2.10, use the `filter` field instead.
+Filter products by category. DEPRECATED: Will be removed in DrikGallery 2.10, use the `filter` field instead.
 
 </td>
 </tr>
@@ -1160,7 +1160,7 @@ Filter products by category. DEPRECATED: Will be removed in MajorityWorld 2.10, 
 <td valign="top">[<a href="#id">ID</a>]</td>
 <td>
 
-Filter products by collections. DEPRECATED: Will be removed in MajorityWorld 2.10, use the `filter` field instead.
+Filter products by collections. DEPRECATED: Will be removed in DrikGallery 2.10, use the `filter` field instead.
 
 </td>
 </tr>
@@ -1187,7 +1187,7 @@ Filter products by stock availability.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`, `description`
 
@@ -1270,7 +1270,7 @@ Filtering options for product types.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`
 
@@ -1508,7 +1508,7 @@ Return the last n elements from the list.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use payment gateway config instead in availablePaymentGateways.
+DEPRECATED: Will be removed in DrikGallery 2.10, use payment gateway config instead in availablePaymentGateways.
 
 </blockquote>
 </td>
@@ -1563,7 +1563,7 @@ List of the shop's pages.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `content`, `slug`, `title`
 
@@ -1700,7 +1700,7 @@ Filtering options for orders.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `id`, `discount_name`, `token`, `user_email`, `user__email`
 
@@ -1783,7 +1783,7 @@ Filtering options for draft orders.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `id`, `discount_name`, `token`, `user_email`, `user__email`
 
@@ -1911,7 +1911,7 @@ List of the storefront's menus.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`
 
@@ -1994,7 +1994,7 @@ List of the storefronts's menu items.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `name`
 
@@ -2545,7 +2545,7 @@ Filtering options for customers.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `email`, `first_name`, `last_name`, `default_shipping_address__first_name`, `default_shipping_address__last_name`, `default_shipping_address__city`, `default_shipping_address__country`
 
@@ -2619,7 +2619,7 @@ Filtering options for staff users.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use `filter: {search: {}}` instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use `filter: {search: {}}` instead.
 Supported filter parameters:
 `email`, `first_name`, `last_name`, `default_shipping_address__first_name`, `default_shipping_address__last_name`, `default_shipping_address__city`, `default_shipping_address__country`
 
@@ -7080,7 +7080,7 @@ Shipping method.
 <td valign="top"><a href="#checkoutupdatevoucher">CheckoutUpdateVoucher</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use CheckoutAddPromoCode or CheckoutRemovePromoCode instead. Adds voucher to the checkout. Query it without voucher_code field to remove voucher from checkout.
+DEPRECATED: Will be removed in DrikGallery 2.10, use CheckoutAddPromoCode or CheckoutRemovePromoCode instead. Adds voucher to the checkout. Query it without voucher_code field to remove voucher from checkout.
 
 </td>
 </tr>
@@ -7522,7 +7522,7 @@ A one-time token required to remove account. Sent by email using AccountRequestD
 <td valign="top"><a href="#customerpasswordreset">CustomerPasswordReset</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use RequestPasswordReset instead. Resets the customer's password.
+DEPRECATED: Will be removed in DrikGallery 2.10, use RequestPasswordReset instead. Resets the customer's password.
 
 </td>
 </tr>
@@ -7540,7 +7540,7 @@ Fields required to reset customer's password.
 <td valign="top"><a href="#customeraddresscreate">CustomerAddressCreate</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountAddressCreate instead. Create a new address for the customer.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountAddressCreate instead. Create a new address for the customer.
 
 </td>
 </tr>
@@ -7567,7 +7567,7 @@ A type of address. If provided, the new address will be automatically assigned a
 <td valign="top"><a href="#customersetdefaultaddress">CustomerSetDefaultAddress</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountSetDefaultAddress instead. Sets a default address for the authenticated user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountSetDefaultAddress instead. Sets a default address for the authenticated user.
 
 </td>
 </tr>
@@ -7594,7 +7594,7 @@ The type of address.
 <td valign="top"><a href="#customerregister">CustomerRegister</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountRegister instead. Register a new user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountRegister instead. Register a new user.
 
 </td>
 </tr>
@@ -7612,7 +7612,7 @@ Fields required to create a user.
 <td valign="top"><a href="#loggeduserupdate">LoggedUserUpdate</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountUpdate instead.Updates data of the logged in user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountUpdate instead.Updates data of the logged in user.
 
 </td>
 </tr>
@@ -8161,7 +8161,7 @@ ID of an auth token to delete.
 <td valign="top"><a href="#passwordreset">PasswordReset</a></td>
 <td>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use RequestPasswordReset instead. Sends an email with the account password change link to customer.
+DEPRECATED: Will be removed in DrikGallery 2.10, use RequestPasswordReset instead. Sends an email with the account password change link to customer.
 
 </td>
 </tr>
@@ -10991,7 +10991,7 @@ Checkout object.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use discount instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use discount instead.
 
 </blockquote>
 </td>
@@ -12085,7 +12085,7 @@ List of errors that occurred executing the mutation.
 
 ### CheckoutUpdateVoucher
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use CheckoutAddPromoCode or CheckoutRemovePromoCode instead. Adds voucher to the checkout. Query it without voucher_code field to remove voucher from checkout.
+DEPRECATED: Will be removed in DrikGallery 2.10, use CheckoutAddPromoCode or CheckoutRemovePromoCode instead. Adds voucher to the checkout. Query it without voucher_code field to remove voucher from checkout.
 
 <table>
 <thead>
@@ -13123,7 +13123,7 @@ Four-digit number representing the card’s expiration year.
 
 ### CustomerAddressCreate
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountAddressCreate instead. Create a new address for the customer.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountAddressCreate instead. Create a new address for the customer.
 
 <table>
 <thead>
@@ -13369,7 +13369,7 @@ The concerned order line.
 
 ### CustomerPasswordReset
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use RequestPasswordReset instead. Resets the customer's password.
+DEPRECATED: Will be removed in DrikGallery 2.10, use RequestPasswordReset instead. Resets the customer's password.
 
 <table>
 <thead>
@@ -13395,7 +13395,7 @@ List of errors that occurred executing the mutation.
 
 ### CustomerRegister
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountRegister instead. Register a new user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountRegister instead. Register a new user.
 
 <table>
 <thead>
@@ -13426,7 +13426,7 @@ List of errors that occurred executing the mutation.
 
 ### CustomerSetDefaultAddress
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountSetDefaultAddress instead. Sets a default address for the authenticated user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountSetDefaultAddress instead. Sets a default address for the authenticated user.
 
 <table>
 <thead>
@@ -15117,7 +15117,7 @@ Language.
 
 ### LoggedUserUpdate
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use AccountUpdate instead.Updates data of the logged in user.
+DEPRECATED: Will be removed in DrikGallery 2.10, use AccountUpdate instead.Updates data of the logged in user.
 
 <table>
 <thead>
@@ -16436,7 +16436,7 @@ Returns True, if order requires shipping.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use discount instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use discount instead.
 
 </blockquote>
 </td>
@@ -17952,7 +17952,7 @@ A user instance with a new password.
 
 ### PasswordReset
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use RequestPasswordReset instead. Sends an email with the account password change link to customer.
+DEPRECATED: Will be removed in DrikGallery 2.10, use RequestPasswordReset instead. Sends an email with the account password change link to customer.
 
 <table>
 <thead>
@@ -18802,7 +18802,7 @@ Informs about product's availability in the storefront, current price and discou
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, Has been renamed to `pricing`.
+DEPRECATED: Will be removed in DrikGallery 2.10, Has been renamed to `pricing`.
 
 </blockquote>
 </td>
@@ -18844,7 +18844,7 @@ The product's default base price.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, has been replaced by `basePrice`
+DEPRECATED: Will be removed in DrikGallery 2.10, has been replaced by `basePrice`
 
 </blockquote>
 </td>
@@ -19580,7 +19580,7 @@ Whether it is in stock and visible or not.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, this has been moved to the parent type as 'isAvailable'.
+DEPRECATED: Will be removed in DrikGallery 2.10, this has been moved to the parent type as 'isAvailable'.
 
 </blockquote>
 </td>
@@ -20542,7 +20542,7 @@ Price of the product variant.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, has been replaced by 'pricing.priceUndiscounted'
+DEPRECATED: Will be removed in DrikGallery 2.10, has been replaced by 'pricing.priceUndiscounted'
 
 </blockquote>
 </td>
@@ -20557,7 +20557,7 @@ Informs about variant's availability in the storefront, current price and discou
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, has been renamed to `pricing`.
+DEPRECATED: Will be removed in DrikGallery 2.10, has been renamed to `pricing`.
 
 </blockquote>
 </td>
@@ -21816,7 +21816,7 @@ The value or the first value of an attribute.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use values instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use values instead.
 
 </blockquote>
 </td>
@@ -24691,7 +24691,7 @@ Whether it is in stock and visible or not.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, this has been moved to the parent type as 'isAvailable'.
+DEPRECATED: Will be removed in DrikGallery 2.10, this has been moved to the parent type as 'isAvailable'.
 
 </blockquote>
 </td>
@@ -25045,7 +25045,7 @@ A language code to return the translation for.
 <p>⚠️ <strong>DEPRECATED</strong></p>
 <blockquote>
 
-DEPRECATED: Will be removed in MajorityWorld 2.10, use the minSpent field instead.
+DEPRECATED: Will be removed in DrikGallery 2.10, use the minSpent field instead.
 
 </blockquote>
 </td>

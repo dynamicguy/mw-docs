@@ -1,11 +1,11 @@
 ---
 id: using-saleor
-title: Using MajorityWorld
+title: Using DrikGallery
 ---
 
 ## About the dashboard
 
-The MajorityWorld 2.0 dashboard is the administration panel behind your storefront. In a nutshell, it is for managing people, products, and processes:
+The DrikGallery 2.0 dashboard is the administration panel behind your storefront. In a nutshell, it is for managing people, products, and processes:
 
 - People: Assign and manage staff within your system
 - Products: Add, change, display, and delete digital and physical inventory
@@ -13,7 +13,7 @@ The MajorityWorld 2.0 dashboard is the administration panel behind your storefro
 
 ## Dashboard sections
 
-The dashboard is split into sections where you can complete different tasks. The whole experience is designed by our UX experts to be intuitive and simple. We believe that you will find that your MajorityWorld store is easy to manage, but these instructions are for those moments when you get stuck, and can help you get the most from your store. A little time reading them now will make a huge difference to how effectively you use MajorityWorld.
+The dashboard is split into sections where you can complete different tasks. The whole experience is designed by our UX experts to be intuitive and simple. We believe that you will find that your DrikGallery store is easy to manage, but these instructions are for those moments when you get stuck, and can help you get the most from your store. A little time reading them now will make a huge difference to how effectively you use DrikGallery.
 
 The dashboard has the following sections:
 
@@ -22,12 +22,12 @@ The dashboard has the following sections:
 - [Orders](dashboard/orders.md): A full view of current and past orders
 - [Customers](dashboard/customers.md): Your customer database, with specific details for each buyer
 - [Discounts](dashboard/discounts/sales.md): Give your customers great sales offers or discount vouchers
-- [Translations](dashboard/translations.md): Translate dynamic content in your MajorityWorld store
+- [Translations](dashboard/translations.md): Translate dynamic content in your DrikGallery store
 - [Configuration](dashboard/configuration/intro.md): Manage all the administration elements of your dashboard and processes like tax automation and shipping
 
 Most sections of the dashboard consist of two types of views:
 
-* List of records - This view displays a list of existing records in MajorityWorld. Some of these views allow you to filter the records or manage the column settings. Most of the views also allow you to set the number of list items displayed on the page (number of rows).
+* List of records - This view displays a list of existing records in DrikGallery. Some of these views allow you to filter the records or manage the column settings. Most of the views also allow you to set the number of list items displayed on the page (number of rows).
 
 * Record details - This view is displayed when you select one of the records on the list view. This page provides more details on the selected record.
 
@@ -35,7 +35,7 @@ Most sections of the dashboard consist of two types of views:
 
 ### How to set up your account
 
-The first thing you need to do is set up a master account for your store — sometimes called an Admin Account or a Superuser Account. This is done by your developer when forking the platform and setting up your iteration of MajorityWorld. You just need to supply the developer with the details of your main administrator and the setup password.
+The first thing you need to do is set up a master account for your store — sometimes called an Admin Account or a Superuser Account. This is done by your developer when forking the platform and setting up your iteration of DrikGallery. You just need to supply the developer with the details of your main administrator and the setup password.
 
 
 ### How to access your dashboard

@@ -4,7 +4,7 @@ title: Translations
 ---
 ## Introduction
 
-The MajorityWorld dashboard is in English as a default language but all elements can be translated to local languages. Your developer or a subcontractor can localize language strings of general or static elements, such as the menus and system information, on the MajorityWorld page on [Transifex](https://www.transifex.com/dynamicguy/mw/).
+The DrikGallery dashboard is in English as a default language but all elements can be translated to local languages. Your developer or a subcontractor can localize language strings of general or static elements, such as the menus and system information, on the DrikGallery page on [Transifex](https://www.transifex.com/dynamicguy/mw/).
 
 For all dynamic content, such as categories, products, and descriptions, you can make changes directly in the Translations section of the dashboard.
 

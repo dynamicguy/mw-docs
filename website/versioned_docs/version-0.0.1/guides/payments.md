@@ -4,7 +4,7 @@ title: Payments
 original_id: payments
 ---
 
-## Integrating a new Payment Gateway into MajorityWorld
+## Integrating a new Payment Gateway into DrikGallery
 
 We are using a universal flow, that each gateway should fulfill, there are several methods that should be implemented.
 
@@ -52,7 +52,7 @@ def authorize(
     # Handle connecting to the gateway and sending the auth request here
     response = gateway.authorize(token=payment_information.token)
 
-    # Return a correct response format so MajorityWorld can process it,
+    # Return a correct response format so DrikGallery can process it,
     # the response must be json serializable
     return GatewayResponse(
         is_success=response.is_success,
@@ -81,7 +81,7 @@ def refund(
     # Handle connecting to the gateway and sending the refund request here
     response = gateway.refund(token=payment_information.token)
 
-    # Return a correct response format so MajorityWorld can process it,
+    # Return a correct response format so DrikGallery can process it,
     # the response must be json serializable
     return GatewayResponse(
         is_success=response.is_success,
@@ -111,7 +111,7 @@ def capture(
     # Handle connecting to the gateway and sending the capture request here
     response = gateway.capture(token=payment_information.token)
 
-    # Return a correct response format so MajorityWorld can process it,
+    # Return a correct response format so DrikGallery can process it,
     # the response must be json serializable
     return GatewayResponse(
         is_success=response.is_success,
@@ -141,7 +141,7 @@ def void(
     # Handle connecting to the gateway and sending the void request here
     response = gateway.void(token=payment_information.token)
 
-    # Return a correct response format so MajorityWorld can process it,
+    # Return a correct response format so DrikGallery can process it,
     # the response must be json serializable
     return GatewayResponse(
         is_success=response.is_success,
@@ -174,7 +174,7 @@ def charge(
         amount=payment_information.amount,
     )
 
-    # Return a correct response format so MajorityWorld can process it,
+    # Return a correct response format so DrikGallery can process it,
     # the response must be json serializable
     return GatewayResponse(
         is_success=response.is_success,
@@ -280,7 +280,7 @@ def process_payment(
 
 ## Handling errors
 
-Gateway-specific errors should be parsed to MajorityWorld’s universal format. More on this can be found in [Payments Architecture](/mw-docs/docs/architecture/payments).
+Gateway-specific errors should be parsed to DrikGallery’s universal format. More on this can be found in [Payments Architecture](/mw-docs/docs/architecture/payments).
 
 
 ## Adding payment method to the old checkout (optional)

@@ -1,6 +1,6 @@
 ---
 id: version-0.0.1-intro
-title: Customizing MajorityWorld
+title: Customizing DrikGallery
 sidebar_label: Introduction
 original_id: intro
 ---

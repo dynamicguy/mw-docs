@@ -17,7 +17,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Customizing MajorityWorld",
+        "label": "Customizing DrikGallery",
         "ids": [
           "version-0.0.1-customization/intro",
           "version-0.0.1-customization/docker",
@@ -112,7 +112,7 @@
     ]
   },
   "version-0.0.1-dashboard/before-you-start": {
-    "Saleor Dashboard Guide": [
+    "Drik Gallery Dashboard Guide": [
       "version-0.0.1-dashboard/before-you-start",
       "version-0.0.1-dashboard/using-saleor",
       "version-0.0.1-dashboard/home",

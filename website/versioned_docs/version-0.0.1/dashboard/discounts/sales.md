@@ -4,7 +4,7 @@ title: Sales
 original_id: sales
 ---
 
-Sales are an excellent way to encourage customers to use your store. MajorityWorld offers you a range of sale options:
+Sales are an excellent way to encourage customers to use your store. DrikGallery offers you a range of sale options:
 
 - Specific price reductions or percentage discounts
 - Sales on single or grouped products, categories, and collections

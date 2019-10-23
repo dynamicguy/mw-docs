@@ -3,7 +3,7 @@ id: environment-variables
 title: Environment Variables
 ---
 
-We are fans of the [12 factor](https://12factor.net/) approach and portable code, so you can configure most of MajorityWorld using only environment variables.
+We are fans of the [12 factor](https://12factor.net/) approach and portable code, so you can configure most of DrikGallery using only environment variables.
 
 ## List of variables
 
@@ -98,7 +98,7 @@ Make sure all images come with a pre-warm to ensure they’re created and availa
 
 ## Tax variables
 
-For more information on how to configure taxes in MajorityWorld, see the  [taxes](guides/taxes.md) topic of the _How to_ section.
+For more information on how to configure taxes in DrikGallery, see the  [taxes](guides/taxes.md) topic of the _How to_ section.
 
 
 ### `VATLAYER_ACCESS_KEY`
@@ -118,7 +118,7 @@ This variable stores Avalara’s `password` or `license`.
 
 ### `AVATAX_USE_SANDBOX`
 
-`True` when `DEBUG` is set to `True`. This variable determines if MajorityWorld should use the Avatax sandbox API.
+`True` when `DEBUG` is set to `True`. This variable determines if DrikGallery should use the Avatax sandbox API.
 
 
 ### `AVATAX_COMPANY_NAME`

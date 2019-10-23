@@ -5,7 +5,7 @@ title: How to Obtain a Product
 
 ## Introduction
 
-This guide describes how to obtain products from the MajorityWorld GraphQL API.
+This guide describes how to obtain products from the DrikGallery GraphQL API.
 
 You can either retrieve a single product or a list of products. You may require a list of products in many situations, for example, when you need to simply display the catalog in your storefront, or to provide a third party service with a list of products available in your store.
 
@@ -21,7 +21,7 @@ This argument must be coupled with the number of products you want to get. The m
 >
 > **Pagination**
 >
-> Pagination is required in most of the queries returning lists of items in the MajorityWorld GraphQL API. This mechanism protects the server from requests returning large datasets as these can slow down your application and make it less efficient. See the [Pagination](api/pagination.md) topic for more about pagination in MajorityWorld.
+> Pagination is required in most of the queries returning lists of items in the DrikGallery GraphQL API. This mechanism protects the server from requests returning large datasets as these can slow down your application and make it less efficient. See the [Pagination](api/pagination.md) topic for more about pagination in DrikGallery.
 
 Let's take a look at an example query to fetch a list of products:
 

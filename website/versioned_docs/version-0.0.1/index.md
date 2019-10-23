@@ -4,19 +4,19 @@ title:
 original_id: index
 ---
 
-# Welcome to **MajorityWorld Docs**
-###### You’ll find everything you need to start working with MajorityWorld
+# Welcome to **DrikGallery Docs**
+###### You’ll find everything you need to start working with DrikGallery
 
 
 ## Developer's Guide
 
 [home-grid]
-[![](assets/icons/getting-started.svg) **Getting Started** Installing MajorityWorld and creating an Administrator account.](/mw-docs/docs/getting-started/intro)
-[![](assets/icons/customizing.svg) **Customizing MajorityWorld** Customizing MajorityWorld to your chosen technology stack. Working with Python.](/mw-docs/docs/customization/intro)
+[![](assets/icons/getting-started.svg) **Getting Started** Installing DrikGallery and creating an Administrator account.](/mw-docs/docs/getting-started/intro)
+[![](assets/icons/customizing.svg) **Customizing DrikGallery** Customizing DrikGallery to your chosen technology stack. Working with Python.](/mw-docs/docs/customization/intro)
 [/home-grid]
 [home-grid]
-[![](assets/icons/payment-gateways.svg) **Supported Payment Gateways** How to use Braintree, Razorpay and Stripe with MajorityWorld.](/mw-docs/docs/payment-gateways/intro)
-[![](assets/icons/architecture.svg) **Architecture** Understanding the MajorityWorld system architecture.](/mw-docs/docs/architecture/intro)
+[![](assets/icons/payment-gateways.svg) **Supported Payment Gateways** How to use Braintree, Razorpay and Stripe with DrikGallery.](/mw-docs/docs/payment-gateways/intro)
+[![](assets/icons/architecture.svg) **Architecture** Understanding the DrikGallery system architecture.](/mw-docs/docs/architecture/intro)
 [/home-grid]
 [home-grid]
 [![](assets/icons/integrations.svg) **Integrations** Adding SEO, Google, mailing and other integrations to the platform.](/mw-docs/docs/integrations/intro)
@@ -26,22 +26,22 @@ original_id: index
 ## GraphQL API
 
 [home-grid]
-[![](assets/icons/before-start.svg) **Getting Started** All you need to know to get yourself started with MajorityWorld GraphQL API.](/mw-docs/docs/next/api/intro)
+[![](assets/icons/before-start.svg) **Getting Started** All you need to know to get yourself started with DrikGallery GraphQL API.](/mw-docs/docs/next/api/intro)
 [![](assets/icons/guides.svg) **Guides** How to effectively create and complete a checkout and obtain products.](api-process/intro.md)
 [/home-grid]
 
 [home-grid]
-[![](assets/icons/api-reference.svg) **API Reference** A reference of every data type and operation in MajorityWorld GraphQL API.](api-reference.md)
+[![](assets/icons/api-reference.svg) **API Reference** A reference of every data type and operation in DrikGallery GraphQL API.](api-reference.md)
 [/home-grid]
 
-## MajorityWorld Dashboard Guide
+## DrikGallery Dashboard Guide
 
 [home-grid]
-[![](assets/icons/before-start.svg) **Before You Start** Find out more about MajorityWorld and how to get a version to use for your e-commerce.](/mw-docs/docs/dashboard/before-you-start)
-[![](assets/icons/using-saleor.svg) **Using MajorityWorld** Find out more about MajorityWorld and how to get a version to use for your e-commerce.](/mw-docs/docs/dashboard/using-saleor)
+[![](assets/icons/before-start.svg) **Before You Start** Find out more about DrikGallery and how to get a version to use for your e-commerce.](/mw-docs/docs/dashboard/before-you-start)
+[![](assets/icons/using-saleor.svg) **Using DrikGallery** Find out more about DrikGallery and how to get a version to use for your e-commerce.](/mw-docs/docs/dashboard/using-saleor)
 [/home-grid]
 [home-grid]
-[![](assets/icons/storefront.svg) **Home** Understanding the front page of your MajorityWorld Dashboard.](/mw-docs/docs/dashboard/home)
+[![](assets/icons/storefront.svg) **Home** Understanding the front page of your DrikGallery Dashboard.](/mw-docs/docs/dashboard/home)
 [![](assets/icons/catalogue.svg) **Catalogue** How to add and manage products individually or in groups, and in categories or collections.](/mw-docs/docs/dashboard/catalog/intro)
 [/home-grid]
 [home-grid]

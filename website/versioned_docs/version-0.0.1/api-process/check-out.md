@@ -6,9 +6,9 @@ title: How to Create Checkout
 
 ## Introduction
 
-Below is a description of a checkout process. We assume that at this stage you have already completed the steps included in the [Getting Started](api/intro.md) section of this chapter and that you are familiar with the basic setup of the MajorityWorld GraphQL API.
+Below is a description of a checkout process. We assume that at this stage you have already completed the steps included in the [Getting Started](api/intro.md) section of this chapter and that you are familiar with the basic setup of the DrikGallery GraphQL API.
 
-The below process describes the key milestones in the checkout process flow in MajorityWorld. There are also additional steps that may occur along the way; however, the purpose of this instruction is to deliver a base reference for the user to work with.
+The below process describes the key milestones in the checkout process flow in DrikGallery. There are also additional steps that may occur along the way; however, the purpose of this instruction is to deliver a base reference for the user to work with.
 
 The code snippets included in this section may be run in [Playground](api/playground.md) or your preferred HTTP client.
 
@@ -46,7 +46,7 @@ As a result, this mutation returns the following fields:
 
   - `isShippingRequired` - denotes whether shipping is required for this checkout
 
-  - `availablePaymentGateways` - a list of payment gateways which are currently configured on your MajorityWorld server and can be used to pay for the checkout
+  - `availablePaymentGateways` - a list of payment gateways which are currently configured on your DrikGallery server and can be used to pay for the checkout
 
   - `availableShippingMethods` - a list of available shipping methods for this checkout. If the items in the cart require shipment, setting a shipping method is mandatory
 
@@ -211,7 +211,7 @@ The payment creation process consists of two operations:
 
 2. Executing the mutation `checkoutPaymentCreate` using the above-generated token.
 
-Depending on the selected payment gateway, you will either use the JavaScript form which can be integrated to MajorityWorld, or the payment gateway will direct you to an external payment page. The payment gateway sends information about if the payment is successful, along with tokenized credit card payment information. This token is then used to run the `checkoutPaymentCreate` mutation.
+Depending on the selected payment gateway, you will either use the JavaScript form which can be integrated to DrikGallery, or the payment gateway will direct you to an external payment page. The payment gateway sends information about if the payment is successful, along with tokenized credit card payment information. This token is then used to run the `checkoutPaymentCreate` mutation.
 
 ### `paymentClientToken`
 

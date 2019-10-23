@@ -4,9 +4,9 @@ title: Extensions
 ---
 ## Introduction
 
-MajorityWorld is built based on extensions architecture. It includes hooks for most standard operations, such as the calculation of prices in the checkout or calling certain actions when an order has been created.
+DrikGallery is built based on extensions architecture. It includes hooks for most standard operations, such as the calculation of prices in the checkout or calling certain actions when an order has been created.
 
-MajorityWorld arrives with some plugins already implemented by default. These plugins are located in `saleor.extensions.plugins`.
+DrikGallery arrives with some plugins already implemented by default. These plugins are located in `saleor.extensions.plugins`.
 To provide the `ExtensionManager` with a list of enabled plugins, include the Python plugin path in the `settings.PLUGINS` list.
 
 ### Tips on writing your own plugin
@@ -54,7 +54,7 @@ PLUGINS = ["saleor.extensions.plugins.custom.CustomPlugin", ]
 
 ### Configuring plugins
 
-MajorityWorld allows you to change the configuration of any given plugin over API. The plugin owner needs to overwrite a method to create a structure of default configuration `_get_default_configuration` and `CONFIG_STRUCTURE`. The plugin configuration received from API can be validated by overwriting the `validate_plugin_configuration` method. It requires an expected structure as in the following example:
+DrikGallery allows you to change the configuration of any given plugin over API. The plugin owner needs to overwrite a method to create a structure of default configuration `_get_default_configuration` and `CONFIG_STRUCTURE`. The plugin configuration received from API can be validated by overwriting the `validate_plugin_configuration` method. It requires an expected structure as in the following example:
 
 ```python
 # custom/plugin.py
@@ -136,13 +136,13 @@ Configuration fields:
 | --- | --- |
 | `name` | Name of the field |
 | `value` | Current value of the field |
-| `type` | Type of the field. MajorityWorld supports `String` and `Boolean` |
+| `type` | Type of the field. DrikGallery supports `String` and `Boolean` |
 | `helpText` | Description of the field |
 | `label` | Label for the field |
 
 > **Note**
 > 
-> Once you have completed the above configuration, as a plugin owner, you can decide to display certain configuration options in the Plugins page in the dashboard's Configuration section of MajorityWorld. 
+> Once you have completed the above configuration, as a plugin owner, you can decide to display certain configuration options in the Plugins page in the dashboard's Configuration section of DrikGallery. 
 > 
 > This allows dashboard users to manage the plugin's basic setup. The scope of the setup available via Plugins page is up to you. 
 > 
@@ -151,8 +151,8 @@ Configuration fields:
 ## About Extensions Manager
 
 The `ExtensionsManager` is located in the `saleor.core.extensions.manager`. It is a class responsible for handling all declared plugins and serving a response from them. In case of a non-declared plugin, it serves a default response.
-It is possible to overwrite an `ExtensionsManager` class by implementing it on its own. MajorityWorld will discover the manager class by taking the declared path from `settings.EXTENSIONS_MANAGER`.
-Each Django request object has its own manager included as the `extensions` field. It is attached in the MajorityWorld middleware.
+It is possible to overwrite an `ExtensionsManager` class by implementing it on its own. DrikGallery will discover the manager class by taking the declared path from `settings.EXTENSIONS_MANAGER`.
+Each Django request object has its own manager included as the `extensions` field. It is attached in the DrikGallery middleware.
 
 ## Base plugin
 
@@ -162,7 +162,7 @@ If the plugin is first in line, it will use the default value calculated by the 
 
 ## Celery tasks
 
-Some plugin operations should be done asynchronously. If MajorityWorld has Celery enabled, it will discover all tasks declared in `tasks.py` in the plugin directories.
+Some plugin operations should be done asynchronously. If DrikGallery has Celery enabled, it will discover all tasks declared in `tasks.py` in the plugin directories.
 
 ### `plugin.py`
 

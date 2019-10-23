@@ -28,7 +28,7 @@ Identify and understand the trends in your product sales through a handy overvie
 
 ## Activity
 
-The activity card gives you a quick summary of all actions taken by your MajorityWorld system; orders which have been placed, fulfilled and canceled, and details of payment processing. 
+The activity card gives you a quick summary of all actions taken by your DrikGallery system; orders which have been placed, fulfilled and canceled, and details of payment processing. 
 
 
 > **TIP**

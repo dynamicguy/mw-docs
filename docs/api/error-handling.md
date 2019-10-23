@@ -5,7 +5,7 @@ title: Error Handling
 
 There are several error types in the GraphQL API and you may come across different ones depending on the operations you are trying to perform.
 
-The MajorityWorld GraphQL API handles the following three errors:
+The DrikGallery GraphQL API handles the following three errors:
 
 ## Syntax error
 

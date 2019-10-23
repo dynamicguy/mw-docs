@@ -3,9 +3,9 @@ id: password-validation
 title: Password Validation
 ---
 
-When setting up your new MajorityWorld instance, you must consider the password policy you want to implement in order to properly protect customer data. 
+When setting up your new DrikGallery instance, you must consider the password policy you want to implement in order to properly protect customer data. 
 
-MajorityWorld utilizes Django password validation, which consists of the following validators:
+DrikGallery utilizes Django password validation, which consists of the following validators:
 
 * `UserAttributeSimilarityValidator` - Checks for similarities between the user’s password and some of the user’s attributes
 
@@ -15,7 +15,7 @@ MajorityWorld utilizes Django password validation, which consists of the followi
 
 * `NumericPasswordValidator` -  Checks if the proposed password isn’t all numbers
 
-By default, MajorityWorld arrives with the `MinimumLengthValidator` enabled. The minimum length is set to 8 characters.
+By default, DrikGallery arrives with the `MinimumLengthValidator` enabled. The minimum length is set to 8 characters.
 
 You can manage and customize the password validation integration using several functions provided in Django (using all or some of the possible validations). You can also write your own password validator. 
 

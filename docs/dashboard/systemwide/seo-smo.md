@@ -4,7 +4,7 @@ title: SEO and SMO
 ---
 ## Introduction
 
-MajorityWorld enables you to automatically handle certain aspects of how search engines see and index your products.
+DrikGallery enables you to automatically handle certain aspects of how search engines see and index your products.
 
 ## Search Engine Optimization (SEO)
 

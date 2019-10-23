@@ -3,17 +3,17 @@ id: index
 title: Home
 ---
 
-# Welcome to **MajorityWorld Docs**
-###### You’ll find everything you need to start working with MajorityWorld
+# Welcome to **DrikGallery Docs**
+###### You’ll find everything you need to start working with DrikGallery
 
-## MajorityWorld Dashboard Guide
+## DrikGallery Dashboard Guide
 
 [home-grid]
-[![](assets/icons/getting-started.svg) **Before You Start** Find out more about MajorityWorld and how to get a version to use for your e-commerce.](dashboard/before-you-start.md)
-[![](assets/icons/using-saleor.svg) **Using MajorityWorld** All you need to know about the Dashboard: access, structure and its core features.](dashboard/using-saleor.md)
+[![](assets/icons/getting-started.svg) **Before You Start** Find out more about DrikGallery and how to get a version to use for your e-commerce.](dashboard/before-you-start.md)
+[![](assets/icons/using-saleor.svg) **Using DrikGallery** All you need to know about the Dashboard: access, structure and its core features.](dashboard/using-saleor.md)
 [/home-grid]
 [home-grid]
-[![](assets/icons/storefront.svg) **Home** Understanding the front page of your MajorityWorld Dashboard.](dashboard/home.md)
+[![](assets/icons/storefront.svg) **Home** Understanding the front page of your DrikGallery Dashboard.](dashboard/home.md)
 [![](assets/icons/catalogue.svg) **Catalogue** How to add and manage products individually or in groups, and in categories or collections.](dashboard/catalog/intro.md)
 [/home-grid]
 [home-grid]
@@ -25,36 +25,36 @@ title: Home
 [![](assets/icons/configure.svg) **Configuration** Manage all the administration elements of your dashboard and processes like tax automation and shipping.](dashboard/configuration/intro.md)
 [/home-grid]
 [home-grid]
-[![](assets/icons/system-features.svg) **Systemwide Features** Features spanning throughout the MajorityWorld dashboard.](dashboard/systemwide/introduction.md)
+[![](assets/icons/system-features.svg) **Systemwide Features** Features spanning throughout the DrikGallery dashboard.](dashboard/systemwide/introduction.md)
 [/home-grid]
 
 ## GraphQL API
 
 [home-grid]
-[![](assets/icons/before-start.svg) **Getting Started** All you need to know to get yourself started with MajorityWorld GraphQL API.](api/intro.md)
+[![](assets/icons/before-start.svg) **Getting Started** All you need to know to get yourself started with DrikGallery GraphQL API.](api/intro.md)
 [![](assets/icons/guides.svg) **Guides** How to effectively create and complete a checkout and obtain products.](api-process/intro.md)
 [/home-grid]
 
 [home-grid]
-[![](assets/icons/api-reference.svg) **API Reference** A reference of every data type and operation in MajorityWorld GraphQL API.](api-reference.md)
+[![](assets/icons/api-reference.svg) **API Reference** A reference of every data type and operation in DrikGallery GraphQL API.](api-reference.md)
 [/home-grid]
 
 
-## Running your MajorityWorld Server
+## Running your DrikGallery Server
 
 [home-grid]
-[![](assets/icons/before-start.svg) **Getting Started** Installing MajorityWorld and creating an Administrator account.](getting-started/intro.md)
-[![](assets/icons/configure.svg) **Configuring MajorityWorld** Customizing MajorityWorld to your chosen technology stack. Working with Python.](customization/intro.md)
+[![](assets/icons/before-start.svg) **Getting Started** Installing DrikGallery and creating an Administrator account.](getting-started/intro.md)
+[![](assets/icons/configure.svg) **Configuring DrikGallery** Customizing DrikGallery to your chosen technology stack. Working with Python.](customization/intro.md)
 [/home-grid]
 
 [home-grid]
 [![](assets/icons/integrations.svg) **Integrations** Adding Google Analytics, Open Exchange Rates and other integrations to the platform.](integrations/intro.md)
-[![](assets/icons/deployment.svg) **Deployment** Using Docker, Heroku and other tools to deploy your MajorityWorld store and handle errors.](deployment/intro.md)
+[![](assets/icons/deployment.svg) **Deployment** Using Docker, Heroku and other tools to deploy your DrikGallery store and handle errors.](deployment/intro.md)
 [/home-grid]
 
 [home-grid]
 [![](assets/icons/contribute.svg) **Contributing Guides** Connected to our GitHub and Spectrum communities for more support.](contributing/intro.md)
-[![](assets/icons/advanced.svg) **Advanced** Everything you need to know as a Developer to get  your MajorityWorld set up.](advanced/intro.md)
+[![](assets/icons/advanced.svg) **Advanced** Everything you need to know as a Developer to get  your DrikGallery set up.](advanced/intro.md)
 [/home-grid]
 
 

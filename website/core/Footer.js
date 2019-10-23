@@ -30,10 +30,10 @@ class Footer extends React.Component {
         <div className="wrapper">
           <div className="docs-footer-top">
             <div className="newsletter">
-              <span>Get updates from MajorityWorld:</span>
+              <span>Get updates from DrikGallery:</span>
               <div id="mc_embed_signup">
                 <form
-                  action="https://MajorityWorld.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8"
+                  action="https://DrikGallery.us19.list-manage.com/subscribe/post?u=8bd6297e7e63c06d9c242a92d&amp;id=f8dadd63b8"
                   method="post"
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
@@ -99,7 +99,7 @@ class Footer extends React.Component {
               <span>Contact us:</span>
               <a
                 className="twitter-icon"
-                href="https://twitter.com/MajorityWorld"
+                href="https://twitter.com/DrikGallery"
                 target="_blank"
               >
                 <img
@@ -113,7 +113,7 @@ class Footer extends React.Component {
               </a>
               <a
                 className="fb-icon"
-                href="https://www.facebook.com/MajorityWorld/"
+                href="https://www.facebook.com/DrikGallery/"
                 target="_blank"
               >
                 <img
@@ -125,7 +125,7 @@ class Footer extends React.Component {
               </a>
               <a
                 className="so-icon"
-                href="https://spectrum.chat/MajorityWorld"
+                href="https://spectrum.chat/DrikGallery"
                 target="_blank"
               >
                 <img
@@ -137,7 +137,7 @@ class Footer extends React.Component {
               </a>
               <a
                 className="github-icon"
-                href="https://github.com/dynamicguy/MajorityWorld"
+                href="https://github.com/dynamicguy/DrikGallery"
                 target="_blank"
               >
                 <img
@@ -160,7 +160,7 @@ class Footer extends React.Component {
             </div>
             <div className="footer-menu">
               <div className="footer-menu-wrapper">
-                <h2>Why Saleor</h2>
+                <h2>Why Drik Gallery</h2>
                 <ul>
                   <li>
                     <a href="">Switching from Magento </a>
@@ -267,13 +267,13 @@ class Footer extends React.Component {
             </div>
             <div className="dosc-footer-links">
               <a
-                href="https://MajorityWorld.com/privacy-policy-terms-and-conditions"
+                href="https://DrikGallery.com/privacy-policy-terms-and-conditions"
                 target="_blank"
               >
                 Terms of use
               </a>
               <a
-                href="https://MajorityWorld.com/privacy-policy-terms-and-conditions/"
+                href="https://DrikGallery.com/privacy-policy-terms-and-conditions/"
                 target="_blank"
               >
                 Privacy policy

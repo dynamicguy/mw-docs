@@ -1,6 +1,6 @@
 {
   "dashboard/getting-started/intro": {
-    "MajorityWorld Dashboard Guide": [
+    "DrikGallery Dashboard Guide": [
       "dashboard/before-you-start",
       "dashboard/using-saleor",
       "dashboard/home",
@@ -79,7 +79,7 @@
     ]
   },
   "getting-started/intro": {
-    "Running your Saleor Server": [
+    "Running your Drik Gallery Server": [
       {
         "type": "subcategory",
         "label": "Getting started",
@@ -95,7 +95,7 @@
       },
       {
         "type": "subcategory",
-        "label": "Configuring Saleor",
+        "label": "Configuring Drik Gallery",
         "ids": [
           "customization/intro",
           "customization/environment-variables",

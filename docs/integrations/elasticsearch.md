@@ -10,7 +10,7 @@ For the installation guide, see the [official documentation](https://www.elastic
 
 You can configure an integration with the set of environment variables. 
 
-When deploying on Heroku - you can use an add-on which provides Elasticsearch as a service. By default, MajorityWorld uses Elasticsearch 6.3.
+When deploying on Heroku - you can use an add-on which provides Elasticsearch as a service. By default, DrikGallery uses Elasticsearch 6.3.
 
 When deploying somewhere else, you can use one of the following services:
 
@@ -31,7 +31,7 @@ URL to the Elasticsearch engine. If it is empty, search is not available.
 
 ## Data indexing
 
-MajorityWorld uses [Django Elasticsearch DSL](https://github.com/sabricot/django-elasticsearch-dsl) as a wrapper for [Elasticsearch DSL](https://github.com/elastic/elasticsearch-dsl-py) to enable automatic indexing and sync. 
+DrikGallery uses [Django Elasticsearch DSL](https://github.com/sabricot/django-elasticsearch-dsl) as a wrapper for [Elasticsearch DSL](https://github.com/elastic/elasticsearch-dsl-py) to enable automatic indexing and sync. 
 Indexes are defined in the [documents](https://github.com/saleor/saleor/search/documents.py) file. 
 Refer to documentation of above projects for help and tips.
 

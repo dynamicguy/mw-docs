@@ -2,11 +2,11 @@
 id: payment-gateways
 title: Supported Payment Gateways
 ---
-Each payment gateway integrated with MajorityWorld comes as a plugin solution. 
+Each payment gateway integrated with DrikGallery comes as a plugin solution. 
 
-To activate your payment plugin, go to the [Plugins](dashboard/configuration/plugins.md) section in the Configuration tab of your MajorityWorld dashboard.
+To activate your payment plugin, go to the [Plugins](dashboard/configuration/plugins.md) section in the Configuration tab of your DrikGallery dashboard.
 
-MajorityWorld supports the following payment gateways:
+DrikGallery supports the following payment gateways:
 
 - `DUMMY` - for testing purposes only
 - `BRAINTREE` - supports PayPal and Credit Cards
@@ -31,7 +31,7 @@ This gateway implements payments using [Braintree](https://www.braintreepayments
 | `Merchant ID` | Merchant ID assigned by Braintree |
 | `Public API key` | Public key assigned by Braintree |
 | `Secret API key` | Private key assigned by Braintree |
-| `Require 3D secure` | Determines if MajorityWorld should enforce 3D secure during payment |
+| `Require 3D secure` | Determines if DrikGallery should enforce 3D secure during payment |
 
 > **Note**
 >
@@ -51,7 +51,7 @@ Before you start, you need to create your API credentials. Go to [the API Keys s
 | --- | --- |
 | `Public API key` | Your Razorpay key ID |
 | `Secret API key` | Your Razorpay secret key ID |
-| `Store customers card` | Determines if MajorityWorld should store card details |
+| `Store customers card` | Determines if DrikGallery should store card details |
 | `Automatic payment capture` | Whether to auto-capture transactions, `True` (default) or `False`. |
 
 > **Note**
@@ -71,6 +71,6 @@ This gateway implements payments using [Stripe](https://stripe.com/).
 | --- | --- |
 | `Public API key` | Your Stripe key ID |
 | `Secret API key` | Your Stripe secret key ID |
-| `Store customers card` | Determines if MajorityWorld should store cards on payments |
+| `Store customers card` | Determines if DrikGallery should store cards on payments |
 | `Automatic payment capture` | Whether to auto-capture transactions, `True` (default) or `False` |
 

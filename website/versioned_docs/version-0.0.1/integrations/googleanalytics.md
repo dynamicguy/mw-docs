@@ -4,7 +4,7 @@ title: Google Analytics
 original_id: googleanalytics
 ---
 
-Because of EU law regulations, MajorityWorld will not use any tracking cookies by default.
+Because of EU law regulations, DrikGallery will not use any tracking cookies by default.
 
 We do however support server-side Google Analytics out of the box using [Google Analytics Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/).
 

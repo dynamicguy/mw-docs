@@ -4,7 +4,7 @@ title: Configuration
 original_id: configuration
 ---
 
-We are fans of the [12factor](https://12factor.net/) approach and portable code so you can configure most of MajorityWorld using just environment variables.
+We are fans of the [12factor](https://12factor.net/) approach and portable code so you can configure most of DrikGallery using just environment variables.
 
 
 ## Payments Gateways
@@ -147,7 +147,7 @@ This field stores Avalara’s `password` or Avalara’s `license`.
 
 #### `AVATAX_USE_SANDBOX`
 
-`True` when `DEBUG` is set to `True`. Determines if MajorityWorld should use Avatax sandbox API.
+`True` when `DEBUG` is set to `True`. Determines if DrikGallery should use Avatax sandbox API.
 
 
 #### `AVATAX_COMPANY_NAME`

@@ -4,8 +4,8 @@ title: Plugins
 ---
 
 
-This page gives you a convenient overview of currently installed plugins in MajorityWorld.
-MajorityWorld provides the possibility to add various extensions to it so you can create your own configuration. 
+This page gives you a convenient overview of currently installed plugins in DrikGallery.
+DrikGallery provides the possibility to add various extensions to it so you can create your own configuration. 
 
 The plugin page is used to display general information about installed plugins, along with their activation status (active or not active). 
 
@@ -15,15 +15,15 @@ If you choose to, you can use the plugin window to display the basic configurati
 
 For more detailed information about plugins and our Extension Manager, see the [Extensions](advanced/extensions.md) topic in the chapter for developers.
 
-MajorityWorld arrives with the following plugins already integrated. 
+DrikGallery arrives with the following plugins already integrated. 
 
-* Used to configure taxes in MajorityWorld:
+* Used to configure taxes in DrikGallery:
 
     * Vatlayer 
 
     * Avalara
 
-* Used to process payments (all supported payment gateways in MajorityWorld come as plugins):
+* Used to process payments (all supported payment gateways in DrikGallery come as plugins):
 
     * Braintree
 

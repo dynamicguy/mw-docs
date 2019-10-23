@@ -45,7 +45,7 @@ Type the price of your product manually or using the stepper by the currency ind
 >
 > **Displaying localized prices**
 >
-> MajorityWorld operates and charges in the store’s default currency but is capable of displaying an estimated amount in the user’s local currency.
+> DrikGallery operates and charges in the store’s default currency but is capable of displaying an estimated amount in the user’s local currency.
 >
 > - GeoIP is used to determine the user’s country
 > - Locale database (Unicode CLDR) is used to determine the local currency

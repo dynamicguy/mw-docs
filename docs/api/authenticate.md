@@ -6,7 +6,7 @@ title: How to Authenticate with our API
 If you are entering the API for the first time as a user who is not logged in, you will only have access to the objects available publicly. For example, by default, you can query public data, such as published products or pages.
 
 To fetch protected data, like orders or users, you need to authenticate your access.
-MajorityWorld API uses a [JWT token](https://jwt.io/) authentication mechanism.
+DrikGallery API uses a [JWT token](https://jwt.io/) authentication mechanism.
 Once you create a token, you need to include it as a header with every GraphQL request.
 
 The authorization header has the following format:

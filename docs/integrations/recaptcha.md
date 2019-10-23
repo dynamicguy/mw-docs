@@ -17,7 +17,7 @@ To enable reCAPTCHA, set the following keys in your environment:
 
 > **Note**
 >
-> You are not required to set your public and private keys for development use. You only have to set them up if you are using MajorityWorld for production (Google will remind you if you do not).
+> You are not required to set your public and private keys for development use. You only have to set them up if you are using DrikGallery for production (Google will remind you if you do not).
 
 You can use the following development keys:
 

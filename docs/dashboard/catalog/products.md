@@ -45,7 +45,7 @@ For more information on how to set the attribute so it can be used in the column
 
 ## Product concept
 
-Before filling your shop with products, you need to learn about 3 basic product concepts in MajorityWorld: 
+Before filling your shop with products, you need to learn about 3 basic product concepts in DrikGallery: 
 * Product type 
 * Product
 * Product variant
@@ -63,7 +63,7 @@ If the _product variant_ has no overridden property (for example: price specific
 
 Variants are the most important objects in your shop. All operations on cart or stock utilize variants. Even if you do not set up multiple variants for your product, the store will create one under the hood.
 
-To explain the difference, we will use a bookstore example. Let's imagine you are an owner and one of your products is a book titled "Introduction to MajorityWorld".
+To explain the difference, we will use a bookstore example. Let's imagine you are an owner and one of your products is a book titled "Introduction to DrikGallery".
 
 The book is available in hard and soft cover, so there would be _2 product variants_.
 
@@ -80,7 +80,7 @@ Or being back to the hard/ soft cover books: the attribute here is a _Cover Type
 
 It’s what distinguishes different variants. For example: for the attribute _cover type_ you will have two variant attributes: _hard cover_ or _soft cover_.
 
-For more information on the product structure in MajorityWorld, see the [Product Types](dashboard/configuration/products.md) topic.
+For more information on the product structure in DrikGallery, see the [Product Types](dashboard/configuration/products.md) topic.
 
 ## Stock management
 
@@ -166,7 +166,7 @@ For more information on taxes, see the [Taxes](dashboard/configuration/taxes.md)
 >
 > ##### Displaying localized prices
 >
-> MajorityWorld operates and charges in the store’s default currency but is capable of displaying an estimated amount in the user’s local currency.
+> DrikGallery operates and charges in the store’s default currency but is capable of displaying an estimated amount in the user’s local currency.
 >
 > - GeoIP is used to determine the user’s country
 > - Locale database (Unicode CLDR) is used to determine the local currency

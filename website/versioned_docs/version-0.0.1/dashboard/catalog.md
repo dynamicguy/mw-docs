@@ -13,7 +13,7 @@ The catalog section contains your entire online inventory. You can view products
 
 ## Categories
 
-Products on the MajorityWorld platform can be sorted by category if you sell a range of items.
+Products on the DrikGallery platform can be sorted by category if you sell a range of items.
 
 
 ### Adding a Category

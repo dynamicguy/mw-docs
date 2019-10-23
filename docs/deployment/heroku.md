@@ -58,7 +58,7 @@ $ python manage.py update_exchange_rates --all
 
 ## Enabling Elasticsearch
 
-MajorityWorld uses Postgres as a default search backend. If you want to switch to Elasticsearch, use the Bonsai plugin and run the following commands:
+DrikGallery uses Postgres as a default search backend. If you want to switch to Elasticsearch, use the Bonsai plugin and run the following commands:
 
 ```console
 $ heroku addons:create bonsai:sandbox-6 --version=5.4

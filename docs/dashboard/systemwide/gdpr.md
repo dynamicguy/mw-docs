@@ -5,7 +5,7 @@ title: GDPR Compliance
 
 ## Introduction
 
-By default, MajorityWorld handles several aspects of the regulations introduced by the GDPR.
+By default, DrikGallery handles several aspects of the regulations introduced by the GDPR.
 
 
 ## Deleting users
@@ -22,7 +22,7 @@ Users are also able to request their account to be deleted, from the storefront 
 
 ## Cookies
 
-All cookies used by MajorityWorld are strictly necessary to move around the website and use its features, therefore there is no need to notify the users about them.
+All cookies used by DrikGallery are strictly necessary to move around the website and use its features, therefore there is no need to notify the users about them.
 
 
 ## Privacy policy and terms of service statements

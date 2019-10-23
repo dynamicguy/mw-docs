@@ -28,9 +28,9 @@ Use the [[Add&nbsp;Address]] button in the top right corner of the Address Book 
 >
 > **Localized addresses**
 >
-> When creating addresses in different countries, MajorityWorld uses Google’s address internationalization database to automatically validate addresses (in both local language/alphabet and their Latinized version: “北京” vs. “Beijing”).
+> When creating addresses in different countries, DrikGallery uses Google’s address internationalization database to automatically validate addresses (in both local language/alphabet and their Latinized version: “北京” vs. “Beijing”).
 > 
-> MajorityWorld can also provide front-end code with information on:
+> DrikGallery can also provide front-end code with information on:
 >
 > - Which fields should be visible
 > - How the fields should be arranged
@@ -72,9 +72,9 @@ Users are also able to request their account to be deleted, from the storefront 
 > All data used for the checkout process are left untouched. This is to keep track of financial transaction. 
 >
 > This solution follows the GDPR regulations.
-> However, MajorityWorld and its creators do not bear responsibility for your compliance with legal protocols. Check the law in your local area and make sure that you comply with all data processing legislation.
+> However, DrikGallery and its creators do not bear responsibility for your compliance with legal protocols. Check the law in your local area and make sure that you comply with all data processing legislation.
 >
-> For more details on data protection implementation in MajorityWorld, see our [GDPR](dashboard/systemwide/gdpr.md) topic.
+> For more details on data protection implementation in DrikGallery, see our [GDPR](dashboard/systemwide/gdpr.md) topic.
 
 
  

@@ -3,7 +3,7 @@ id: sentry
 title: Error Tracking with Sentry
 ---
 
-MajorityWorld provides integration with [Sentry](https://sentry.io/) - a comprehensive error tracking and reporting tool.
+DrikGallery provides integration with [Sentry](https://sentry.io/) - a comprehensive error tracking and reporting tool.
 
 To enable basic error reporting, export an environment variable:
 

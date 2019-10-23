@@ -3,7 +3,7 @@ id: creating-superuser
 title: Creating Administrator Account
 ---
 
-MajorityWorld is an application built with Django so you can use the following command to create your master account:
+DrikGallery is an application built with Django so you can use the following command to create your master account:
 
 ```console
 $ python manage.py createsuperuser

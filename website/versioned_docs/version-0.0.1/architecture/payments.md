@@ -16,14 +16,14 @@ Then depending on the gateway and the card type, you have between a few days and
 
 This is very useful when an exact price cannot be determined until after the order is prepared, or we want to capture the money as soon as we ship the order. It is also useful if your business prefers to manually screen orders for fraud attempts.
 
-When viewing orders with pre-authorized payments MajorityWorld will offer options to either capture or void the funds.
+When viewing orders with pre-authorized payments DrikGallery will offer options to either capture or void the funds.
 
 
 ## Refunds
 
-You can issue partial or full refunds for all captured payments. When editing an order and removing items, MajorityWorld will also offer to automatically issue a partial refund.
+You can issue partial or full refunds for all captured payments. When editing an order and removing items, DrikGallery will also offer to automatically issue a partial refund.
 
-MajorityWorld uses the concept of Payments and Transactions to fulfill the payment process.
+DrikGallery uses the concept of Payments and Transactions to fulfill the payment process.
 
 
 ## Payment Methods
@@ -62,7 +62,7 @@ There are 5 possible transaction kinds:
 
 ## Transaction errors
 
-MajorityWorld unifies error codes across all gateways.
+DrikGallery unifies error codes across all gateways.
 
 | Code | Graphql API value | Description |
 | --- | --- | --- |

@@ -208,3 +208,7 @@ $ npm run build-api-reference http://localhost:8000/graphql/
 # Full Documentation
 
 Full documentation can be found on the [website](https://docusaurus.io/).
+
+# Publish
+
+GIT_USER=dynamicguy CURRENT_BRANCH=master USE_SSH=true npm run publish-gh-pages

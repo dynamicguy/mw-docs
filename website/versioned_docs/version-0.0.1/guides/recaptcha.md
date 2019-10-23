@@ -25,4 +25,4 @@ To enable reCAPTCHA, you need to set those keys in your environment:
 >| `RECAPTCHA_PUBLIC_KEY` | `6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI` |
 >| `RECAPTCHA_PRIVATE_KEY` | `6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe` |
 >
-> You only have to set them up if you are using MajorityWorld for production (Google will remind you if you do not).
+> You only have to set them up if you are using DrikGallery for production (Google will remind you if you do not).

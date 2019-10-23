@@ -6,7 +6,7 @@ original_id: editorconfig
 
 [EditorConfig](http://editorconfig.org/) is a standard configuration file that aims to ensure consistent style across multiple programming environments.
 
-MajorityWorld’s repository contains an [.editorconfig file](https://github.com/dynamicguy/majorityworld/blob/master/.editorconfig) that describes our formatting requirements.
+DrikGallery’s repository contains an [.editorconfig file](https://github.com/dynamicguy/majorityworld/blob/master/.editorconfig) that describes our formatting requirements.
 
 Most editors and IDEs support this file either directly or via plugins. Consult the [list of supported editors and IDEs](http://editorconfig.org/#download) for instructions.
 

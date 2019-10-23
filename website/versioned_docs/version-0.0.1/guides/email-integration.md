@@ -4,7 +4,7 @@ title: Email Configuration and Integration
 original_id: email-integration
 ---
 
-MajorityWorld offers a few ways to set-up your email settings over SMTP servers and relays through the below environment variables.
+DrikGallery offers a few ways to set-up your email settings over SMTP servers and relays through the below environment variables.
 
 
 ## `EMAIL_URL`

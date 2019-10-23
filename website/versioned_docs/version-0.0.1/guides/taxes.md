@@ -4,7 +4,7 @@ title: Taxes
 original_id: taxes
 ---
 
-MajorityWorld provides the possibility to configure taxes. It supports the following external tax providers: [Avalara](https://www.avalara.com/) and [Vatlayer](https://vatlayer.com/). Currently, only one provider can be enabled at the same time.
+DrikGallery provides the possibility to configure taxes. It supports the following external tax providers: [Avalara](https://www.avalara.com/) and [Vatlayer](https://vatlayer.com/). Currently, only one provider can be enabled at the same time.
 
 
 ## Configuring taxes
@@ -49,17 +49,17 @@ If you do not have a VatLayer API key, you can get one by [subscribing for free 
 
 > **Warning**
 >
-> By default, MajorityWorld is making requests to the VatLayer API through HTTP (insecure), if you are using a paid VatLayer subscription, you may want to set the settings `VATLAYER_USE_HTTPS` to `True`.
+> By default, DrikGallery is making requests to the VatLayer API through HTTP (insecure), if you are using a paid VatLayer subscription, you may want to set the settings `VATLAYER_USE_HTTPS` to `True`.
 
 
 ## Avalara
 
-All configuration and account setup should be done on the Avalara’s admin panel. MajorityWorld uses the standard API of Avalara to fetch tax codes, calculate taxes during the checkout process and transfer data directly to Avalara.
+All configuration and account setup should be done on the Avalara’s admin panel. DrikGallery uses the standard API of Avalara to fetch tax codes, calculate taxes during the checkout process and transfer data directly to Avalara.
 
 
 ### Configuration
 
-Only basic data needs to be provided on MajorityWorld’s side. You need to fill up the following variables: `AVATAX_USERNAME_OR_ACCOUNT`, `AVATAX_PASSWORD_OR_LICENSE`, `AVATAX_USE_SANDBOX`, `AVATAX_COMPANY_NAME`, `AVATAX_AUTOCOMMIT` (refer to the variables descriptions.)
+Only basic data needs to be provided on DrikGallery’s side. You need to fill up the following variables: `AVATAX_USERNAME_OR_ACCOUNT`, `AVATAX_PASSWORD_OR_LICENSE`, `AVATAX_USE_SANDBOX`, `AVATAX_COMPANY_NAME`, `AVATAX_AUTOCOMMIT` (refer to the variables descriptions.)
 
 Avalara supports two ways of authentications:
 
@@ -73,4 +73,4 @@ Avalara requires a company address to properly calculate taxes. Your company’s
 
 ### Tax codes
 
-Avalara has its own system for classifying the product types and expected taxes. On MajorityWorld’s side, the store owner must assign Avalara’s tax code to the given product types or product itself. If you skip this step, MajorityWorld will use the common code for all products (which is not recommended). Assigning a tax code can be done from the dashboard in the product type or the product section. Both of these sections have a field for assigning a tax code for enabled tax gateway.
+Avalara has its own system for classifying the product types and expected taxes. On DrikGallery’s side, the store owner must assign Avalara’s tax code to the given product types or product itself. If you skip this step, DrikGallery will use the common code for all products (which is not recommended). Assigning a tax code can be done from the dashboard in the product type or the product section. Both of these sections have a field for assigning a tax code for enabled tax gateway.

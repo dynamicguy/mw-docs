@@ -9,7 +9,7 @@ This guide assumes a 64-bit installation of Windows.
 
 ## Prerequisites
 
-Before you are ready to run MajorityWorld you will need additional software installed on your computer.
+Before you are ready to run DrikGallery you will need additional software installed on your computer.
 
 
 ### Python
@@ -28,7 +28,7 @@ Make sure that “**Add to PATH**” is selected.
 
 ### PostgreSQL
 
-MajorityWorld needs PostgreSQL version 9.4 or above to work. Get the Windows installer from the [project’s download page](https://www.postgresql.org/download/windows/).
+DrikGallery needs PostgreSQL version 9.4 or above to work. Get the Windows installer from the [project’s download page](https://www.postgresql.org/download/windows/).
 
 Make sure you keep track of the password you set for the administration account during installation.
 

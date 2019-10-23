@@ -8,7 +8,7 @@ The following instructions assume a 64-bit installation of Windows.
 
 ## Prerequisites
 
-Before you are ready to run MajorityWorld, you will need additional software installed on your computer.
+Before you are ready to run DrikGallery, you will need additional software installed on your computer.
 
 
 ### Python
@@ -20,14 +20,14 @@ Make sure that “**Add Python 3.7 to PATH**” is selected.
 
 ### Node.js
 
-MajorityWorld requires version 10 or later. Download the Windows installer from [Node.js downloads page](https://nodejs.org/en/download/).
+DrikGallery requires version 10 or later. Download the Windows installer from [Node.js downloads page](https://nodejs.org/en/download/).
 
 Make sure that “**Add to PATH**” is selected.
 
 
 ### PostgreSQL
 
-MajorityWorld needs PostgreSQL version 9.4 or above to work. Get the Windows installer from the [project’s download page](https://www.postgresql.org/download/windows/).
+DrikGallery needs PostgreSQL version 9.4 or above to work. Get the Windows installer from the [project’s download page](https://www.postgresql.org/download/windows/).
 
 > **Tip**
 >
@@ -49,7 +49,7 @@ Download and install the latest version of the [Build Tools for Visual Studio](h
 
 ## Installation
 
-Once you have installed or updated the pre-requisite software, you are ready to install MajorityWorld. Follow the steps below to start and execute the process:
+Once you have installed or updated the pre-requisite software, you are ready to install DrikGallery. Follow the steps below to start and execute the process:
 
 > **Note**
 >

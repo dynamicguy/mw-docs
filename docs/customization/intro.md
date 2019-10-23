@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Configuring MajorityWorld
+title: Configuring DrikGallery
 sidebar_label: Introduction
 ---
 

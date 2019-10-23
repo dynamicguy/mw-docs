@@ -4,11 +4,11 @@ title: How to Integrate New Payment Gateway
 ---
 ## Introduction
 
-For more details on the payment platforms supported in MajorityWorld, see the [Supported Payment Gateways](integrations/payment-gateways.md) topic.
+For more details on the payment platforms supported in DrikGallery, see the [Supported Payment Gateways](integrations/payment-gateways.md) topic.
 
-## How to integrate a new payment gateway into MajorityWorld
+## How to integrate a new payment gateway into DrikGallery
 
-MajorityWorld uses a universal flow that each gateway should fulfill. There are several methods that should be implemented.
+DrikGallery uses a universal flow that each gateway should fulfill. There are several methods that should be implemented.
 
 Your changes should be stored in the `saleor.payment.gateways.<gateway name>` package.
 
@@ -119,11 +119,11 @@ Client tokens should not be reused; a new client token should be generated for e
 
 ## Handling errors
 
-Gateway-specific errors should be parsed to MajorityWorld’s universal format. 
+Gateway-specific errors should be parsed to DrikGallery’s universal format. 
 
 ### Transaction errors
 
-MajorityWorld unifies error codes across all gateways.
+DrikGallery unifies error codes across all gateways.
 
 | Code | Graphql API Value | Description |
 | --- | --- | --- |

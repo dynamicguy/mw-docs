@@ -4,13 +4,13 @@ title: Attributes
 ---
 ## Introduction
 
-The Attributes page allows you to use the full capacity of the product structure in MajorityWorld. By configuring your products right, product management in MajorityWorld becomes a hassle-free task.
+The Attributes page allows you to use the full capacity of the product structure in DrikGallery. By configuring your products right, product management in DrikGallery becomes a hassle-free task.
 
 The main Attributes page displays a list of all existing attributes. The list consist of several columns indicating the attribute parameters (such as an attribute code or whether the attribute is visible to your customers).
 
 You can create variations of products you sell to reflect the wide range of colors, sizes, and materials in which the product is available.
 
-For more information on the product structure in MajorityWorld, see the [Products](dashboard/catalog/products.md#product-concept-introduction) topic.
+For more information on the product structure in DrikGallery, see the [Products](dashboard/catalog/products.md#product-concept-introduction) topic.
 
 > **Example**
 >
